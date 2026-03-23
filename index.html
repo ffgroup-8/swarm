@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0050)file:///Users/jondenjackson/Downloads/index_7.html -->
+<!-- saved from url=(0051)file:///Users/jondenjackson/Downloads/index_21.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,144 +17,30 @@
     min-height: 100vh;
   }
 
-  /* ── Header ── */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 40px;
-  }
+  .header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; }
+  .sitemap-title { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 4px; }
+  .sitemap-subtitle { font-size: 24px; font-weight: 700; color: #0f1c20; margin-bottom: 4px; }
+  .sitemap-date { font-size: 12px; color: #999; }
 
-  .sitemap-title {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 4px;
-  }
+  .legend-box { background: #fff; border: 1.5px solid #d4d4cd; border-radius: 10px; padding: 16px 20px; min-width: 320px; }
+  .legend-box-title { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0f1c20; margin-bottom: 12px; }
+  .legend-grid { display: grid; grid-template-columns: auto auto auto; gap: 6px 16px; align-items: center; }
+  .legend-grid .lg-header { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #999; padding-bottom: 4px; border-bottom: 1px solid #eee; }
+  .legend-grid .lg-label { font-size: 11px; font-weight: 600; color: #444; display: flex; align-items: center; gap: 6px; }
+  .legend-grid .lg-label .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .dot-design { background: #6366f1; } .dot-dev { background: #f59e0b; } .dot-seo { background: #ef4444; } .dot-content { background: #10b981; } .dot-sanity { background: #8b5cf6; }
+  .legend-grid .lg-status { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #666; }
 
-  .sitemap-subtitle {
-    font-size: 24px;
-    font-weight: 700;
-    color: #0f1c20;
-    margin-bottom: 4px;
-  }
-
-  .sitemap-date {
-    font-size: 12px;
-    color: #999;
-  }
-
-  /* ── Status Legend ── */
-  .legend-box {
-    background: #fff;
-    border: 1.5px solid #d4d4cd;
-    border-radius: 10px;
-    padding: 16px 20px;
-    min-width: 320px;
-  }
-
-  .legend-box-title {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #0f1c20;
-    margin-bottom: 12px;
-  }
-
-  .legend-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 6px 16px;
-    align-items: center;
-  }
-
-  .legend-grid .lg-header {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #999;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #eee;
-  }
-
-  .legend-grid .lg-label {
-    font-size: 11px;
-    font-weight: 600;
-    color: #444;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .legend-grid .lg-label .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .dot-design { background: #6366f1; }
-  .dot-dev { background: #f59e0b; }
-  .dot-seo { background: #ef4444; }
-  .dot-content { background: #10b981; }
-  .dot-sanity { background: #8b5cf6; }
-
-  .legend-grid .lg-status {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 11px;
-    color: #666;
-  }
-
-  /* ── Status Indicators ── */
-  .status-bar {
-    display: flex;
-    gap: 6px;
-    margin-top: 8px;
-    flex-wrap: wrap;
-  }
-
-  .status-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    padding: 3px 8px;
-    border-radius: 4px;
-    border: 1.5px solid;
-    white-space: nowrap;
-  }
-
-  .status-pill .pill-icon {
-    font-size: 10px;
-    line-height: 1;
-  }
-
-  /* Not Started */
-  .status-pill.not-started {
-    background: #f8f8f6;
-    border-color: #ddd;
-    color: #aaa;
-  }
-
-  /* In Progress */
+  .status-bar { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .status-pill { display: inline-flex; align-items: center; gap: 4px; font-size: 9px; font-weight: 600; letter-spacing: 0.02em; padding: 3px 8px; border-radius: 4px; border: 1.5px solid; white-space: nowrap; }
+  .status-pill .pill-icon { font-size: 10px; line-height: 1; }
+  .status-pill.not-started { background: #f8f8f6; border-color: #ddd; color: #aaa; }
   .status-pill.in-progress { border-style: solid; }
   .status-pill.in-progress.design { background: #eef0ff; border-color: #6366f1; color: #6366f1; }
   .status-pill.in-progress.dev { background: #fef8ec; border-color: #f59e0b; color: #b87708; }
   .status-pill.in-progress.seo-tag { background: #fef0f0; border-color: #ef4444; color: #dc2626; }
   .status-pill.in-progress.content { background: #ecfdf5; border-color: #10b981; color: #059669; }
   .status-pill.in-progress.sanity { background: #f3f0ff; border-color: #8b5cf6; color: #7c3aed; }
-
-  /* Completed */
   .status-pill.completed { color: #fff; }
   .status-pill.completed.design { background: #6366f1; border-color: #6366f1; }
   .status-pill.completed.dev { background: #f59e0b; border-color: #f59e0b; color: #fff; }
@@ -162,367 +48,88 @@
   .status-pill.completed.content { background: #10b981; border-color: #10b981; }
   .status-pill.completed.sanity { background: #8b5cf6; border-color: #8b5cf6; }
 
-  /* ── Section ── */
   .section { margin-bottom: 56px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #0f1c20; background: #e8e8e2; display: inline-block; padding: 5px 12px; border-radius: 4px; margin-bottom: 24px; }
 
-  .section-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #0f1c20;
-    background: #e8e8e2;
-    display: inline-block;
-    padding: 5px 12px;
-    border-radius: 4px;
-    margin-bottom: 24px;
-  }
+  .tree-root { display: flex; flex-direction: column; align-items: center; }
+  .node { background: #fff; border: 1.5px solid #d4d4cd; border-radius: 8px; padding: 14px 18px; min-width: 200px; max-width: 280px; position: relative; }
+  .node.home { min-width: 300px; max-width: 340px; border-color: #0f1c20; border-width: 2px; }
+  .node-title { font-size: 13px; font-weight: 700; color: #0f1c20; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .node-title .badge { background: #3bb8c3; color: #fff; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.04em; }
+  .node-desc { font-size: 11px; color: #777; line-height: 1.45; }
+  .node-url { font-size: 10px; color: #3bb8c3; margin-top: 4px; font-weight: 500; }
+  .connector { width: 2px; height: 20px; background: #d4d4cd; margin: 0 auto; }
 
-  /* ── Tree Layout ── */
-  .tree-root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  .nav-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 8px; }
+  .nav-item { background: #0f1c20; color: #fff; font-size: 11px; font-weight: 600; padding: 8px 14px; border-radius: 6px; text-align: center; min-width: 130px; letter-spacing: 0.02em; }
+  .nav-item .nav-desc { font-weight: 400; font-size: 10px; color: rgba(255,255,255,0.55); margin-top: 3px; }
 
-  .node {
-    background: #fff;
-    border: 1.5px solid #d4d4cd;
-    border-radius: 8px;
-    padding: 14px 18px;
-    min-width: 200px;
-    max-width: 280px;
-    position: relative;
-  }
+  .columns { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
+  .column { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .group-box { border: 1.5px dashed #ccc; border-radius: 12px; padding: 24px 16px 16px; position: relative; }
+  .group-box .group-label { position: absolute; top: -8px; left: 16px; background: #f5f5f0; padding: 0 8px; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0f1c20; opacity: 0.5; }
 
-  .node.home {
-    min-width: 300px;
-    max-width: 340px;
-    border-color: #0f1c20;
-    border-width: 2px;
-  }
+  .tag { display: inline-block; font-size: 9px; font-weight: 600; padding: 1px 6px; border-radius: 3px; margin-top: 4px; }
+  .tag.flagship { background: #0f1c20; color: #fff; } .tag.product { background: #d8f3f5; color: #1a8a8f; } .tag.capability { background: #dce8ff; color: #3b5998; } .tag.seo { background: #fde0e0; color: #a03030; } .tag.support { background: #eee; color: #666; } .tag.trust { background: #fef3dd; color: #a07020; } .tag.conversion { background: #e8f5e9; color: #2e7d32; }
 
-  .node-title {
-    font-size: 13px;
-    font-weight: 700;
-    color: #0f1c20;
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .node-title .badge {
-    background: #3bb8c3;
-    color: #fff;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 1px 5px;
-    border-radius: 3px;
-    letter-spacing: 0.04em;
-  }
-
-  .node-desc {
-    font-size: 11px;
-    color: #777;
-    line-height: 1.45;
-  }
-
-  .node-url {
-    font-size: 10px;
-    color: #3bb8c3;
-    margin-top: 4px;
-    font-weight: 500;
-  }
-
-  .connector {
-    width: 2px;
-    height: 20px;
-    background: #d4d4cd;
-    margin: 0 auto;
-  }
-
-  /* ── Nav Row ── */
-  .nav-row {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-  }
-
-  .nav-item {
-    background: #0f1c20;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-align: center;
-    min-width: 130px;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-item .nav-desc {
-    font-weight: 400;
-    font-size: 10px;
-    color: rgba(255,255,255,0.55);
-    margin-top: 3px;
-  }
-
-  /* ── Columns ── */
-  .columns {
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  /* ── Grouping ── */
-  .group-box {
-    border: 1.5px dashed #ccc;
-    border-radius: 12px;
-    padding: 24px 16px 16px;
-    position: relative;
-  }
-
-  .group-box .group-label {
-    position: absolute;
-    top: -8px;
-    left: 16px;
-    background: #f5f5f0;
-    padding: 0 8px;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #0f1c20;
-    opacity: 0.5;
-  }
-
-  .tag {
-    display: inline-block;
-    font-size: 9px;
-    font-weight: 600;
-    padding: 1px 6px;
-    border-radius: 3px;
-    margin-top: 4px;
-  }
-  .tag.flagship { background: #0f1c20; color: #fff; }
-  .tag.product { background: #d8f3f5; color: #1a8a8f; }
-  .tag.capability { background: #dce8ff; color: #3b5998; }
-  .tag.seo { background: #fde0e0; color: #a03030; }
-  .tag.support { background: #eee; color: #666; }
-  .tag.trust { background: #fef3dd; color: #a07020; }
-  .tag.conversion { background: #e8f5e9; color: #2e7d32; }
-
-  hr {
-    border: none;
-    border-top: 1.5px solid #e0e0da;
-    margin: 40px 0;
-  }
-
-  .note {
-    background: #fffde6;
-    border: 1px solid #e8e0a0;
-    border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 12px;
-    color: #6b6530;
-    line-height: 1.5;
-    margin-top: 12px;
-    max-width: 1000px;
-  }
-
-  .page-count {
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
-    color: #0f1c20;
-    margin-top: 32px;
-    padding: 10px 20px;
-    background: #e0f5f5;
-    border-radius: 8px;
-    display: inline-block;
-  }
-
+  hr { border: none; border-top: 1.5px solid #e0e0da; margin: 40px 0; }
+  .note { background: #fffde6; border: 1px solid #e8e0a0; border-radius: 8px; padding: 14px 18px; font-size: 12px; color: #6b6530; line-height: 1.5; margin-top: 12px; max-width: 1000px; }
+  .page-count { text-align: center; font-size: 13px; font-weight: 600; color: #0f1c20; margin-top: 32px; padding: 10px 20px; background: #e0f5f5; border-radius: 8px; display: inline-block; }
   .center { text-align: center; }
 
-  /* ── Progress Summary ── */
-  .progress-summary {
-    background: #fff;
-    border: 1.5px solid #d4d4cd;
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 40px;
-  }
+  .progress-summary { background: #fff; border: 1.5px solid #d4d4cd; border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
+  .progress-summary-title { font-size: 14px; font-weight: 700; color: #0f1c20; margin-bottom: 16px; }
+  .progress-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .progress-label { font-size: 12px; font-weight: 600; color: #444; min-width: 120px; display: flex; align-items: center; gap: 6px; }
+  .progress-track { flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; max-width: 300px; }
+  .progress-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
+  .progress-fill.design { background: #6366f1; } .progress-fill.dev { background: #f59e0b; } .progress-fill.seo-tag { background: #ef4444; } .progress-fill.content { background: #10b981; } .progress-fill.sanity { background: #8b5cf6; }
+  .progress-pct { font-size: 12px; font-weight: 700; color: #444; min-width: 40px; }
 
-  .progress-summary-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #0f1c20;
-    margin-bottom: 16px;
-  }
+  .content-section { background: #fff; border: 1.5px solid #d4d4cd; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
+  .content-section-title { font-size: 14px; font-weight: 700; color: #0f1c20; margin-bottom: 4px; }
+  .content-section-url { font-size: 11px; color: #3bb8c3; font-weight: 500; margin-bottom: 12px; }
+  .content-section p { font-size: 12px; color: #555; line-height: 1.6; margin-bottom: 8px; }
+  .content-section strong { color: #0f1c20; }
+  .content-section ul { font-size: 12px; color: #555; line-height: 1.6; margin-left: 18px; margin-bottom: 8px; }
 
-  .progress-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-  }
-
-  .progress-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #444;
-    min-width: 120px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .progress-track {
-    flex: 1;
-    height: 8px;
-    background: #eee;
-    border-radius: 4px;
-    overflow: hidden;
-    max-width: 300px;
-  }
-
-  .progress-fill {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.3s ease;
-  }
-
-  .progress-fill.design { background: #6366f1; }
-  .progress-fill.dev { background: #f59e0b; }
-  .progress-fill.seo-tag { background: #ef4444; }
-  .progress-fill.content { background: #10b981; }
-  .progress-fill.sanity { background: #8b5cf6; }
-
-  .progress-pct {
-    font-size: 12px;
-    font-weight: 700;
-    color: #444;
-    min-width: 40px;
-  }
-
-  /* ── Content Breakdown ── */
-  .content-section {
-    background: #fff;
-    border: 1.5px solid #d4d4cd;
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 24px;
-  }
-
-  .content-section-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #0f1c20;
-    margin-bottom: 4px;
-  }
-
-  .content-section-url {
-    font-size: 11px;
-    color: #3bb8c3;
-    font-weight: 500;
-    margin-bottom: 12px;
-  }
-
-  .content-section p {
-    font-size: 12px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 8px;
-  }
-
-  .content-section strong {
-    color: #0f1c20;
-  }
-
-  .content-section ul {
-    font-size: 12px;
-    color: #555;
-    line-height: 1.6;
-    margin-left: 18px;
-    margin-bottom: 8px;
-  }
-
-  .content-section .seo-box {
-    background: #f8f8f6;
-    border: 1px solid #e0e0da;
-    border-radius: 6px;
-    padding: 10px 14px;
-    margin-top: 10px;
-  }
-
-  .content-section .seo-box-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #0f1c20;
-    margin-bottom: 6px;
-  }
-
-  .content-section .seo-box p {
-    font-size: 11px;
-    margin-bottom: 4px;
-  }
+  .seo-box { background: #fef0f0; border: 1.5px solid #ef4444; border-radius: 6px; padding: 14px 18px; margin-top: 12px; }
+  .seo-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #dc2626; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .seo-box-title::before { content: '✓'; background: #ef4444; color: #fff; font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+  .seo-box p { font-size: 11px; margin-bottom: 4px; color: #555; }
+  .seo-box table { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 8px; }
+  .seo-box table td { padding: 4px 8px; border-bottom: 1px solid #f5e0e0; vertical-align: top; }
+  .seo-box table td:first-child { font-weight: 700; color: #0f1c20; white-space: nowrap; width: 140px; }
 </style>
 </head>
 <body>
-
-<!-- ═══════════════════════════════════════ -->
-<!-- HEADER -->
-<!-- ═══════════════════════════════════════ -->
 
 <div class="header">
   <div class="header-left">
     <p class="sitemap-title">Swarm Defense Technologies</p>
     <h1 class="sitemap-subtitle">Sitemap &amp; Project Status Tracker</h1>
-    <p class="sitemap-date">Last updated: March 12, 2026</p>
+    <p class="sitemap-date">Last updated: March 23, 2026</p>
   </div>
-
   <div class="legend-box">
     <div class="legend-box-title">Status Indicators</div>
     <div class="legend-grid">
-      <div class="lg-header">Category</div>
-      <div class="lg-header">In Progress</div>
-      <div class="lg-header">Completed</div>
-
+      <div class="lg-header">Category</div><div class="lg-header">In Progress</div><div class="lg-header">Completed</div>
       <div class="lg-label"><span class="dot dot-design"></span> Design</div>
       <div class="lg-status"><span class="status-pill not-started design" style="margin:0;"><span class="pill-icon">○</span> Design</span></div>
       <div class="lg-status"><span class="status-pill completed design" style="margin:0;"><span class="pill-icon">✓</span> Design</span></div>
-
       <div class="lg-label"><span class="dot dot-dev"></span> Development</div>
       <div class="lg-status"><span class="status-pill not-started dev" style="margin:0;"><span class="pill-icon">○</span> Dev</span></div>
       <div class="lg-status"><span class="status-pill completed dev" style="margin:0;"><span class="pill-icon">✓</span> Dev</span></div>
-
       <div class="lg-label"><span class="dot dot-seo"></span> SEO</div>
       <div class="lg-status"><span class="status-pill not-started seo-tag" style="margin:0;"><span class="pill-icon">○</span> SEO</span></div>
       <div class="lg-status"><span class="status-pill completed seo-tag" style="margin:0;"><span class="pill-icon">✓</span> SEO</span></div>
-
       <div class="lg-label"><span class="dot dot-content"></span> Content Input</div>
       <div class="lg-status"><span class="status-pill not-started content" style="margin:0;"><span class="pill-icon">○</span> Content</span></div>
       <div class="lg-status"><span class="status-pill completed content" style="margin:0;"><span class="pill-icon">✓</span> Content</span></div>
-
       <div class="lg-label"><span class="dot dot-sanity"></span> Sanity Dev</div>
       <div class="lg-status"><span class="status-pill not-started sanity" style="margin:0;"><span class="pill-icon">○</span> Sanity</span></div>
       <div class="lg-status"><span class="status-pill completed sanity" style="margin:0;"><span class="pill-icon">✓</span> Sanity</span></div>
     </div>
-
     <div style="margin-top: 10px; padding-top: 8px; border-top: 1px solid #eee;">
       <div class="lg-status" style="font-size: 10px; color: #aaa;">
         <span class="status-pill not-started" style="margin:0;"><span class="pill-icon">○</span> Not Started</span>
@@ -532,69 +139,33 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════ -->
 <!-- OVERALL PROGRESS -->
-<!-- ═══════════════════════════════════════ -->
-
 <div class="progress-summary">
   <div class="progress-summary-title">Overall Project Progress</div>
-
-  <div class="progress-row">
-    <div class="progress-label"><span class="dot dot-design"></span> Design</div>
-    <div class="progress-track"><div class="progress-fill design" style="width: 0%;"></div></div>
-    <div class="progress-pct">0%</div>
-  </div>
-
-  <div class="progress-row">
-    <div class="progress-label"><span class="dot dot-dev"></span> Development</div>
-    <div class="progress-track"><div class="progress-fill dev" style="width: 0%;"></div></div>
-    <div class="progress-pct">0%</div>
-  </div>
-
-  <div class="progress-row">
-    <div class="progress-label"><span class="dot dot-seo"></span> SEO</div>
-    <div class="progress-track"><div class="progress-fill seo-tag" style="width: 0%;"></div></div>
-    <div class="progress-pct">0%</div>
-  </div>
-
-  <div class="progress-row">
-    <div class="progress-label"><span class="dot dot-content"></span> Content Input</div>
-    <div class="progress-track"><div class="progress-fill content" style="width: 0%;"></div></div>
-    <div class="progress-pct">0%</div>
-  </div>
-
-  <div class="progress-row">
-    <div class="progress-label"><span class="dot dot-sanity"></span> Sanity Dev</div>
-    <div class="progress-track"><div class="progress-fill sanity" style="width: 0%;"></div></div>
-    <div class="progress-pct">0%</div>
-  </div>
+  <div class="progress-row"><div class="progress-label"><span class="dot dot-design"></span> Design</div><div class="progress-track"><div class="progress-fill design" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
+  <div class="progress-row"><div class="progress-label"><span class="dot dot-dev"></span> Development</div><div class="progress-track"><div class="progress-fill dev" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
+  <div class="progress-row"><div class="progress-label"><span class="dot dot-seo"></span> SEO</div><div class="progress-track"><div class="progress-fill seo-tag" style="width: 100%;"></div></div><div class="progress-pct">100%</div></div>
+  <div class="progress-row"><div class="progress-label"><span class="dot dot-content"></span> Content Input</div><div class="progress-track"><div class="progress-fill content" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
+  <div class="progress-row"><div class="progress-label"><span class="dot dot-sanity"></span> Sanity Dev</div><div class="progress-track"><div class="progress-fill sanity" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
 </div>
 
-<!-- ═══════════════════════════════════════ -->
-<!-- SECTION 1: MAIN WEBSITE -->
-<!-- ═══════════════════════════════════════ -->
-
+<!-- SECTION 1: MAIN WEBSITE SITEMAP -->
 <div class="section">
   <div class="section-label">🛡️ Swarm Defense — Website Sitemap</div>
-
-  <!-- HOME -->
   <div class="tree-root">
     <div class="node home">
       <div class="node-title">HOME</div>
-      <div class="node-desc">Hero: "U.S.-Built Drones. Proven Volume." Swarming overview, Built in USA, cost-effective, training-ready, operate from any device, software section, mission-ready CTA.</div>
+      <div class="node-desc">Hero: "U.S.-Built Drones. Proven Volume." Swarming overview, Built in USA, cost-effective, training-ready, software section, mission-ready CTA.</div>
       <div class="node-url">/</div>
       <div class="status-bar">
         <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
         <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-        <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
+        <span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span>
         <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
         <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
       </div>
     </div>
-
     <div class="connector"></div>
-
-    <!-- NAV ROW -->
     <div class="nav-row">
       <div class="nav-item">DRONES<div class="nav-desc">Gen2 Hardware Platform</div></div>
       <div class="nav-item">SOFTWARE<div class="nav-desc">Pilot App &amp; Swarm OS</div></div>
@@ -606,494 +177,334 @@
       <div class="nav-item">FAQ<div class="nav-desc">AEO / Schema</div></div>
       <div class="nav-item">CONTACT<div class="nav-desc">Demo Request / CTA</div></div>
     </div>
-
     <div style="height: 20px;"></div>
-
-    <!-- COLUMNS -->
     <div class="columns">
-
-      <!-- ── PRODUCT PAGES COLUMN ── -->
       <div class="column">
         <div class="group-box">
           <div class="group-label">Product &amp; Technology</div>
-
-          <div class="node" style="margin-top: 8px;">
-            <div class="node-title">Drones <span class="badge">FLAGSHIP</span></div>
-            <div class="node-desc">Gen2 drone platform showcase. Modeled after Firefly Gen2 page. Airframe, specs, exploded view, modular payloads, stackable design, BOM under $700, assembly in minutes.</div>
-            <div class="node-url">/drones</div>
-            <span class="tag flagship">Flagship — Hardware Deep-Dive</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node" style="margin-top: 8px;"><div class="node-title">Drones <span class="badge">FLAGSHIP</span></div><div class="node-desc">Gen2 drone platform showcase. Airframe, specs, exploded view, modular payloads, stackable design, BOM under $700.</div><div class="node-url">/drones</div><span class="tag flagship">Flagship — Hardware Deep-Dive</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Software</div>
-            <div class="node-desc">Swarm Defense Pilot App, swarm coordination OS, real-time deconfliction algorithms, OTA updates, mission builder, device-agnostic control. Single operator → 1000+ drones.</div>
-            <div class="node-url">/software</div>
-            <span class="tag product">Core Differentiator</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node"><div class="node-title">Software</div><div class="node-desc">Swarm Defense Pilot App, swarm coordination OS, real-time deconfliction, OTA updates, device-agnostic control. Single operator → 1000+ drones.</div><div class="node-url">/software</div><span class="tag product">Core Differentiator</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Capabilities</div>
-            <div class="node-desc">Mission applications overview: C-UAS Swarm, C-UAS Target, Attritable Attack, ISR/Surveillance, Reusable Attack, CLIK, KIWI one-way attack drone. Manufacturing scale.</div>
-            <div class="node-url">/capabilities</div>
-            <span class="tag capability">Mission Matrix</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node"><div class="node-title">Capabilities</div><div class="node-desc">Mission applications: C-UAS Swarm, C-UAS Target, Attritable Attack, ISR/Surveillance, Reusable Attack, CLIK, KIWI.</div><div class="node-url">/capabilities</div><span class="tag capability">Mission Matrix</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Training Systems</div>
-            <div class="node-desc">C-UAS training &amp; targetry. Realistic threat replication for DoD. Scalable swarm simulations for troops. 2-day operator readiness. Camp Grayling track record.</div>
-            <div class="node-url">/training-systems</div>
-            <span class="tag capability">Revenue Driver</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
-
+          <div class="node"><div class="node-title">Training Systems</div><div class="node-desc">C-UAS training &amp; targetry. Realistic threat replication for DoD. Scalable swarm simulations. 2-day operator readiness.</div><div class="node-url">/training-systems</div><span class="tag capability">Revenue Driver</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
         </div>
       </div>
-
-      <!-- ── COMPANY & CONTENT COLUMN ── -->
       <div class="column">
         <div class="group-box">
           <div class="group-label">Company &amp; Content</div>
-
-          <div class="node" style="margin-top: 8px;">
-            <div class="node-title">Team</div>
-            <div class="node-desc">Leadership bios: Kyle Dorosz (CEO/Founder), Adam Wright (President, ex-Navy SEAL), Ryan Sigmon (Co-Founder). Advisory board. "Join Our Team" section.</div>
-            <div class="node-url">/team</div>
-            <span class="tag trust">Credibility &amp; Trust</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node" style="margin-top: 8px;"><div class="node-title">Team</div><div class="node-desc">Leadership bios: Kyle Dorosz (CEO), Adam Wright (President, ex-Navy SEAL), Ryan Sigmon (Co-Founder). "Join Our Team."</div><div class="node-url">/team</div><span class="tag trust">Credibility &amp; Trust</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Blog</div>
-            <div class="node-desc">SEO content hub. Articles on drone warfare, C-UAS, manufacturing, defense tech, NDAA compliance. 2–4 posts/month. Thought leadership positioning.</div>
-            <div class="node-url">/blog</div>
-            <span class="tag support">Content Marketing / SEO</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node"><div class="node-title">Blog</div><div class="node-desc">SEO content hub. Articles on drone warfare, C-UAS, manufacturing, defense tech, NDAA compliance. 2–4 posts/month.</div><div class="node-url">/blog</div><span class="tag support">Content Marketing / SEO</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Press</div>
-            <div class="node-desc">Media coverage hub. Fox Business, Defense One, Wall Street Journal features. Drone Dominance Program selection ($1.1B). Press kit &amp; media contact.</div>
-            <div class="node-url">/press</div>
-            <span class="tag trust">Social Proof / Authority</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node"><div class="node-title">Press</div><div class="node-desc">Media coverage hub. Fox Business, Defense One, WSJ. Drone Dominance Program ($1.1B). Press kit &amp; media contact.</div><div class="node-url">/press</div><span class="tag trust">Social Proof / Authority</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">FAQs</div>
-            <div class="node-desc">20–30 questions. FAQPage schema. Covers drones, software, manufacturing, compliance, training, partnerships. AEO goldmine for AI search results.</div>
-            <div class="node-url">/faqs</div>
-            <span class="tag seo">AEO / Schema Goldmine</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
+          <div class="node"><div class="node-title">FAQs</div><div class="node-desc">25+ questions. FAQPage schema. Covers drones, software, manufacturing, compliance, training, partnerships. AEO goldmine.</div><div class="node-url">/faqs</div><span class="tag seo">AEO / Schema Goldmine</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
           <div class="connector"></div>
-
-          <div class="node">
-            <div class="node-title">Contact</div>
-            <div class="node-desc">"Schedule a Live Demo." Contact form, email (info@swarmdefense.com), phone (248.990.2754). Auburn Hills, MI location. Calendly or demo request embed.</div>
-            <div class="node-url">/contact</div>
-            <span class="tag conversion">Primary CTA Destination</span>
-            <div class="status-bar">
-              <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-              <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-              <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-              <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-              <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-            </div>
-          </div>
-
+          <div class="node"><div class="node-title">Contact</div><div class="node-desc">"Schedule a Live Demo." Contact form, email, phone. Auburn Hills, MI. Calendly or demo request embed.</div><div class="node-url">/contact</div><span class="tag conversion">Primary CTA Destination</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
 
 <hr>
 
-<!-- ═══════════════════════════════════════ -->
-<!-- SECTION 2: SEO / AEO LANDING PAGES -->
-<!-- ═══════════════════════════════════════ -->
-
+<!-- SECTION 2: SEO LANDING PAGES -->
 <div class="section">
   <div class="section-label">📈 SEO &amp; AEO Landing Pages (Not in Main Nav)</div>
-
-  <div class="note" style="margin-bottom: 24px;">
-    <strong>Note:</strong> These pages are NOT in the main navigation. They exist to capture organic search traffic (Google + AI search engines like ChatGPT, Perplexity, Gemini) and funnel visitors to the main site. Indexed but accessed primarily through organic search. Additional pages can be added as keyword opportunities are identified.
-  </div>
-
+  <div class="note" style="margin-bottom: 24px;"><strong>Note:</strong> These pages are NOT in the main navigation. They exist to capture organic search traffic (Google + AI search engines like ChatGPT, Perplexity, Gemini) and funnel visitors to the main site.</div>
   <div class="columns">
-    <div class="column">
-      <div class="node">
-        <div class="node-title">Drone Swarm Technology</div>
-        <div class="node-desc">National SEO page targeting "drone swarm technology," "military drone swarms," "autonomous drone swarm systems." Educational + product positioning.</div>
-        <div class="node-url">/drone-swarm-technology</div>
-        <span class="tag seo">National SEO</span>
-        <div class="status-bar">
-          <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-          <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-          <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-          <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-          <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="node">
-        <div class="node-title">Counter-UAS Solutions</div>
-        <div class="node-desc">Targeting "counter-UAS training," "C-UAS drone targets," "drone threat simulation." Positions Swarm as the go-to C-UAS training provider.</div>
-        <div class="node-url">/counter-uas-solutions</div>
-        <span class="tag seo">National SEO</span>
-        <div class="status-bar">
-          <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-          <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-          <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-          <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-          <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="node">
-        <div class="node-title">American-Made Drones</div>
-        <div class="node-desc">Targeting "American made military drones," "US manufactured drones," "NDAA compliant drones." Capitalizes on anti-China/DJI sentiment &amp; policy shifts.</div>
-        <div class="node-url">/american-made-drones</div>
-        <span class="tag seo">National SEO</span>
-        <div class="status-bar">
-          <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-          <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-          <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-          <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-          <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="node">
-        <div class="node-title">Attritable Drone Systems</div>
-        <div class="node-desc">Targeting "attritable drones," "low-cost expendable drones military," "one-way attack drones US." KIWI drone as focal product.</div>
-        <div class="node-url">/attritable-drone-systems</div>
-        <span class="tag seo">National SEO</span>
-        <div class="status-bar">
-          <span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span>
-          <span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span>
-          <span class="status-pill not-started seo-tag"><span class="pill-icon">○</span> SEO</span>
-          <span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span>
-          <span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span>
-        </div>
-      </div>
-    </div>
+    <div class="column"><div class="node"><div class="node-title">Drone Swarm Technology</div><div class="node-desc">National SEO: "drone swarm technology," "military drone swarms," "autonomous drone swarm systems."</div><div class="node-url">/drone-swarm-technology</div><span class="tag seo">National SEO</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div></div>
+    <div class="column"><div class="node"><div class="node-title">Counter-UAS Solutions</div><div class="node-desc">National SEO: "counter-UAS training," "C-UAS drone targets," "drone threat simulation."</div><div class="node-url">/counter-uas-solutions</div><span class="tag seo">National SEO</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div></div>
+    <div class="column"><div class="node"><div class="node-title">American-Made Drones</div><div class="node-desc">National SEO: "American made military drones," "US manufactured drones," "NDAA compliant drones."</div><div class="node-url">/american-made-drones</div><span class="tag seo">National SEO</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div></div>
+    <div class="column"><div class="node"><div class="node-title">Attritable Drone Systems</div><div class="node-desc">National SEO: "attritable drones," "low-cost expendable drones military," "one-way attack drones US."</div><div class="node-url">/attritable-drone-systems</div><span class="tag seo">National SEO</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span></div></div></div>
   </div>
 </div>
 
 <hr>
 
-<!-- ═══════════════════════════════════════ -->
-<!-- SUMMARY -->
-<!-- ═══════════════════════════════════════ -->
-
-<div class="center">
-  <div class="page-count">Total Pages at Launch: 14 pages &nbsp;·&nbsp; 70 status items to track (14 pages × 5 categories)</div>
-</div>
-
+<div class="center"><div class="page-count">Total Pages: 14 &nbsp;·&nbsp; 70 status items &nbsp;·&nbsp; SEO: 14/14 Complete ✓</div></div>
 <div style="height: 32px;"></div>
 
-<!-- ═══════════════════════════════════════ -->
-<!-- SECTION 3: PAGE CONTENT STRATEGY -->
-<!-- ═══════════════════════════════════════ -->
-
+<!-- SECTION 3: FULL SEO / AEO BUILD-OUT -->
 <div class="section">
-  <div class="section-label">📋 Page Content Strategy &amp; SEO/AEO Structure</div>
+  <div class="section-label">🔍 Complete SEO / AEO Build-Out — All Pages (14/14 Complete)</div>
 
-  <!-- HOME -->
+  <!-- HOME SEO -->
   <div class="content-section">
-    <div class="content-section-title">🏠 Home</div>
-    <div class="content-section-url">/</div>
+    <div class="content-section-title">🏠 Home</div><div class="content-section-url">swarmdefense.com/</div>
     <p><strong>Purpose:</strong> First impression. Establish authority, convey scale, drive to demo request or deeper pages.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> Bold statement — "U.S.-Built Drones. Proven Volume." Video/animation background of swarm launch. Primary CTA: "Schedule a Live Demo." Secondary: "See Our Drones."</li>
-      <li><strong>Swarming Overview:</strong> Fast, scalable deployment of low-cost attritable drones. Coordination, redundancy, adaptability. Animation or diagram showing swarm behavior.</li>
-      <li><strong>Built in the USA:</strong> Hardware, software, electronics — designed and manufactured in-house, Auburn Hills, MI. Domestic since 2021. 72,000+ units/year current capacity, scaling to 250K+.</li>
-      <li><strong>Metrics Strip:</strong> Key numbers — "72,000 units/year" · "$700 BOM" · "1 operator, 1000+ drones" · "8 years proven" · "NDAA Compliant" · "Less than 20 parts"</li>
-      <li><strong>Capability Cards:</strong> C-UAS Training · Attack Systems · ISR/Surveillance · Swarm Software — each links to deeper page.</li>
-      <li><strong>Software Teaser:</strong> Swarm Defense Pilot App. Build missions from any device. No coding. Real-time control.</li>
-      <li><strong>Press Logos:</strong> Fox Business, Defense One, Wall Street Journal. "$1.1B Drone Dominance Program — Selected."</li>
-      <li><strong>CTA Section:</strong> "This is not a concept." Schedule a live demo or discuss mission support. Contact form or Calendly embed.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Swarm Defense Technologies, drone swarm defense, U.S. military drone manufacturer, American drone swarm company</p>
-      <p><strong>Schema:</strong> Organization, LocalBusiness, Product</p>
-      <p><strong>AEO Targets:</strong> "What is Swarm Defense Technologies?" · "Who makes military drone swarms in the US?" · "What company was selected for the Drone Dominance Program?"</p>
+    <p><strong>Page Sections:</strong> Hero ("U.S.-Built Drones. Proven Volume.") · Swarming Overview · Built in the USA · Metrics Strip (72K units/yr · $700 BOM · 1 operator/1000+ drones · 8 years · NDAA · &lt;20 parts) · Capability Cards · Software Teaser · Press Logos · CTA ("This is not a concept.")</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Swarm Defense Technologies | U.S.-Built Military Drone Swarms at Scale</td></tr>
+        <tr><td>Meta Description</td><td>Swarm Defense Technologies designs and manufactures scalable, low-cost drone swarm systems for the U.S. military. Proven swarm coordination software, NDAA-compliant hardware, and 72,000+ units/year production capacity. Auburn Hills, MI.</td></tr>
+        <tr><td>H1</td><td>U.S.-Built Drones. Proven Volume.</td></tr>
+        <tr><td>Primary Keywords</td><td>Swarm Defense Technologies, military drone swarm, U.S. drone manufacturer, drone swarm defense, American drone swarm company</td></tr>
+        <tr><td>Secondary Keywords</td><td>autonomous drone swarm, low-cost military drone, drone swarm software, NDAA compliant drones, Detroit drone manufacturer</td></tr>
+        <tr><td>Schema</td><td>Organization, LocalBusiness (Auburn Hills, MI), WebSite (sitelinks search box), Product (Gen2)</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/</td></tr>
+        <tr><td>Internal Links</td><td>/drones, /software, /capabilities, /training-systems, /press, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What is Swarm Defense Technologies?" · "Who makes military drone swarms in the US?" · "What company was selected for the Drone Dominance Program?" · "What is the largest US drone swarm manufacturer?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- DRONES -->
+  <!-- DRONES SEO -->
   <div class="content-section">
-    <div class="content-section-title">🛩️ Drones (Gen2 Platform)</div>
-    <div class="content-section-url">/drones</div>
-    <p><strong>Purpose:</strong> Flagship hardware page. Modeled after Firefly's Gen2 drone page but repositioned for defense. Show the physical product, its specs, and why it's purpose-built for military applications.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> "Introducing the Gen2 Defense Platform" — 3D exploded view or cinematic product shot. Emphasis: purpose-built, field-proven, manufactured at scale.</li>
-      <li><strong>We Own the Stack:</strong> Airframe, propulsion, electronics, firmware, mission software — all designed and built in-house. Custom PCB-level integration. No off-the-shelf assembly.</li>
-      <li><strong>Highlights Strip:</strong> Gen2 Airframe · Precision GPS (F9P RTK) · Triple Redundant IMU · Modular Payloads (RF, EO/IR, kinetic) · Smart LiPo Battery (45 Wh) · Stackable: 50 per Pelican case</li>
-      <li><strong>Technical Specifications Table:</strong> Max hover time (30 min) · Battery (45Wh Smart LiPo) · GPS (High Precision RTK, F9P L1/L5) · IMU (Triple Redundant, Thermally Managed) · Frequencies (2.4GHz, 915MHz/868MHz) · Transport (50 Gen2 per Pelican 1730) · Weight (890g) · BOM cost (&lt;$700) · Assembly (&lt;20 parts, minutes to build) · Country of Origin (USA)</li>
-      <li><strong>Design for Scale:</strong> Less than 20 pieces. Manual assembly in minutes. Capable of 100,000+ per year production. Detroit manufacturing heritage.</li>
-      <li><strong>Modular Payloads:</strong> Swappable payloads for rapid mission adaptation — RF, EO/IR, kinetic. Custom airframe modifications available.</li>
-      <li><strong>Multiple Blade Configurations:</strong> Trade-off speed vs. load. Stackable and packable designs for rapid field deployment.</li>
-      <li><strong>KIWI Attack Drone Teaser:</strong> One-way attack variant. Modular payload capacity, 10+ km range, stackable form factor. Link to Capabilities page.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Gen2 defense drone, military drone platform, low-cost military drone, Group 1 military drone, NDAA compliant drone</p>
-      <p><strong>Schema:</strong> Product, TechArticle</p>
-      <p><strong>AEO Targets:</strong> "What drones does Swarm Defense make?" · "How much does a military swarm drone cost?" · "What is a Group 1 military drone?" · "What is the Gen2 defense drone?"</p>
+    <div class="content-section-title">🛩️ Drones (Gen2 Platform)</div><div class="content-section-url">swarmdefense.com/drones</div>
+    <p><strong>Purpose:</strong> Flagship hardware page. Gen2 drone platform — specs, design philosophy, scale manufacturing.</p>
+    <p><strong>Page Sections:</strong> Hero ("Gen2 Defense Platform") · We Own the Stack · Tech Specs Table · Design for Scale · Modular Payloads · Blade Configurations · KIWI Attack Drone Teaser</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Gen2 Defense Drone Platform | Low-Cost, Scalable Military Drones — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>The Gen2 defense drone: U.S.-built, under $700 BOM, &lt;20 parts, assembled in minutes. Precision RTK GPS, triple-redundant IMU, modular payloads. 50 drones per Pelican case. 100,000+ units/year capable.</td></tr>
+        <tr><td>H1</td><td>Gen2 Defense Drone Platform</td></tr>
+        <tr><td>Primary Keywords</td><td>Gen2 defense drone, military drone platform, low-cost military drone, Group 1 drone, NDAA compliant drone, swarm drone hardware</td></tr>
+        <tr><td>Secondary Keywords</td><td>drone bill of materials, stackable military drone, modular payload drone, mass-producible drone, attritable drone platform</td></tr>
+        <tr><td>Schema</td><td>Product (name, description, manufacturer, weight, offers), TechArticle, BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/drones</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /software, /capabilities, /training-systems, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What drones does Swarm Defense make?" · "How much does a military swarm drone cost?" · "What is a Group 1 military drone?" · "What is the Gen2 defense drone?" · "How many parts are in a swarm drone?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- SOFTWARE -->
+  <!-- SOFTWARE SEO -->
   <div class="content-section">
-    <div class="content-section-title">💻 Software</div>
-    <div class="content-section-url">/software</div>
-    <p><strong>Purpose:</strong> Showcase the core differentiator — proprietary swarm coordination software. This is what separates Swarm from every other drone manufacturer. One operator controlling 1000+ drones simultaneously.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> "One Operator. Thousands of Drones." — UI screenshot or app walkthrough video. Emphasis on simplicity and power.</li>
-      <li><strong>Swarm Defense Pilot App:</strong> Build custom missions from any device (laptop, tablet, phone). Set waypoints, change speed profiles, preset or custom swarm formations, stack multiple missions. No coding required.</li>
-      <li><strong>Swarm Coordination Engine:</strong> Real-time path deconfliction algorithms. 0.25-second inter-drone response time. Collision-free coordination of 1000+ drones. Proven over 8 years of commercial operations (200+ light shows/year).</li>
-      <li><strong>Software-Defined Platforms:</strong> Custom PCB-level integration. Over-the-air updates so capability evolves without hardware refresh cycles. All US technology, no foreign influence.</li>
-      <li><strong>Ground Station:</strong> Simple, rugged ground station. Streamlined workflow. Configure missions, position drones, launch — all in minutes. Minimal footprint. Works in austere locations.</li>
-      <li><strong>Software Licensing:</strong> Swarm coordination software available for licensing to integrate with existing platforms. Positioned for allied governments and defense partners.</li>
-      <li><strong>Operator Training:</strong> Mission-ready after 2 days. Clean interface, straightforward controls. No prior drone experience needed.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> drone swarm software, swarm coordination software, autonomous drone control system, drone fleet management military</p>
-      <p><strong>Schema:</strong> SoftwareApplication, Product</p>
-      <p><strong>AEO Targets:</strong> "How do you control a drone swarm?" · "What software controls military drone swarms?" · "Can one person control a drone swarm?" · "What is swarm deconfliction?"</p>
+    <div class="content-section-title">💻 Software</div><div class="content-section-url">swarmdefense.com/software</div>
+    <p><strong>Purpose:</strong> Core differentiator — proprietary swarm coordination software. One operator controlling 1000+ drones.</p>
+    <p><strong>Page Sections:</strong> Hero ("One Operator. Thousands of Drones.") · Pilot App · Swarm Coordination Engine · Software-Defined Platforms · Ground Station · Software Licensing · Operator Training</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Drone Swarm Software | One Operator, 1000+ Drones — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Proprietary swarm coordination software enables a single operator to control 1000+ drones simultaneously. Real-time deconfliction, device-agnostic mission control, and OTA updates. Proven over 8 years of live operations.</td></tr>
+        <tr><td>H1</td><td>One Operator. Thousands of Drones.</td></tr>
+        <tr><td>Primary Keywords</td><td>drone swarm software, swarm coordination software, autonomous drone control, drone fleet management military, swarm deconfliction algorithm</td></tr>
+        <tr><td>Secondary Keywords</td><td>drone pilot app, military drone mission planning, single operator drone swarm, real-time drone coordination, OTA drone updates</td></tr>
+        <tr><td>Schema</td><td>SoftwareApplication (name, operatingSystem, applicationCategory), Product, BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/software</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /drones, /capabilities, /training-systems, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"How do you control a drone swarm?" · "What software controls military drone swarms?" · "Can one person control a drone swarm?" · "What is swarm deconfliction?" · "What is the Swarm Defense Pilot App?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- CAPABILITIES -->
+  <!-- CAPABILITIES SEO -->
   <div class="content-section">
-    <div class="content-section-title">⚡ Capabilities</div>
-    <div class="content-section-url">/capabilities</div>
-    <p><strong>Purpose:</strong> Mission application matrix. Show the breadth of what Swarm Defense systems can do. Each application should have its own visual section.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> "Mission-Ready Across the Spectrum" — Grid or visual matrix of application areas.</li>
-      <li><strong>C-UAS Swarm Defense:</strong> Air base defense and ground formation shielding/countermeasures. Swarm-on-swarm defense concept.</li>
-      <li><strong>C-UAS Target / Targetry:</strong> Precise, repeatable target drone CONOPs. Group 1 and Group 2 targets. Camp Grayling kinetic C-UAS testing track record. Links to Training Systems page.</li>
-      <li><strong>Attritable Attack:</strong> Swarm and individual configurations. KIWI one-way attack drone: modular payload, 10+ km range, stackable form factor. Designed for volume — attritable by design.</li>
-      <li><strong>ISR / Surveillance:</strong> Drone swarms for persistent surveillance and reconnaissance. Multi-drone sensor coverage over large areas.</li>
-      <li><strong>Reusable Attack:</strong> Recoverable strike-capable platforms. Cost-effective multi-use attack profiles.</li>
-      <li><strong>CLIK — Common Lethality Integration Kit:</strong> Modular integration kit for adding lethality to existing drone platforms.</li>
-      <li><strong>Manufacturing at Scale:</strong> 72,000 units/year current. Scaling to 250K+. Detroit manufacturing facility. NDAA-compliant supply chain. Vision: 1,000,000+ drones for national security.</li>
-      <li><strong>Design-to-Deployment Speed:</strong> New model in weeks. High-volume manufacture in months. Manufacturing can be stood up anywhere.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> drone swarm capabilities, C-UAS drone, attritable attack drone, one-way attack drone, military drone capabilities</p>
-      <p><strong>Schema:</strong> Product, Service, ItemList</p>
-      <p><strong>AEO Targets:</strong> "What can drone swarms be used for?" · "What is an attritable drone?" · "What is CLIK drone integration?" · "How are drone swarms used in C-UAS?"</p>
+    <div class="content-section-title">⚡ Capabilities</div><div class="content-section-url">swarmdefense.com/capabilities</div>
+    <p><strong>Purpose:</strong> Mission application matrix — full breadth of Swarm Defense systems across defense segments.</p>
+    <p><strong>Page Sections:</strong> Hero ("Mission-Ready Across the Spectrum") · C-UAS Swarm Defense · C-UAS Targetry · Attritable Attack / KIWI · ISR/Surveillance · Reusable Attack · CLIK · Manufacturing at Scale · Design-to-Deployment Speed</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Drone Swarm Capabilities | C-UAS, Attack, ISR &amp; Training — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Swarm Defense capabilities: C-UAS swarm defense, attritable attack (KIWI), ISR/surveillance, training targetry, and CLIK lethality integration. Scalable from dozens to thousands of drones per mission.</td></tr>
+        <tr><td>H1</td><td>Mission-Ready Across the Spectrum</td></tr>
+        <tr><td>Primary Keywords</td><td>drone swarm capabilities, C-UAS drone system, attritable attack drone, one-way attack drone, KIWI drone, military drone ISR</td></tr>
+        <tr><td>Secondary Keywords</td><td>drone swarm defense, CLIK integration kit, Group 1 target drone, swarm countermeasures, scalable drone manufacturing</td></tr>
+        <tr><td>Schema</td><td>ItemList (capability cards), Service, Product (KIWI), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/capabilities</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /drones, /software, /training-systems, /contact, /blog</td></tr>
+        <tr><td>AEO Targets</td><td>"What can drone swarms be used for?" · "What is an attritable drone?" · "What is the KIWI attack drone?" · "What is CLIK drone integration?" · "How are drone swarms used for C-UAS?" · "What is a one-way attack drone?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- TRAINING SYSTEMS -->
+  <!-- TRAINING SYSTEMS SEO -->
   <div class="content-section">
-    <div class="content-section-title">🎯 Training Systems</div>
-    <div class="content-section-url">/training-systems</div>
-    <p><strong>Purpose:</strong> Dedicated page for the training and C-UAS targetry business — a current revenue driver and the original entry point into defense. This is where Swarm has proven track record.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> "Preparing Forces for the Swarm Era" — Video of drone swarm launch in training environment.</li>
-      <li><strong>The Threat is Real:</strong> Modern warfare context. Ukraine lessons learned. Coordinated drone swarms are the new battlefield reality. Troops need realistic training against this specific threat.</li>
-      <li><strong>Realistic Threat Replication:</strong> Custom-built software simulates coordinated swarm attacks. Each drone shares data and reacts in real time. Adjustable threat profiles — waves, formations, speed variations.</li>
-      <li><strong>C-UAS Target Operations:</strong> Group 1 and Group 2 precise, repeatable target drone CONOPs. Kinetic C-UAS testing support. Camp Grayling experience. Support to prime contractors since 2020.</li>
-      <li><strong>Rapid Deployment:</strong> Single operator launches full swarm. Minimal footprint ground station. Mobile training environments, austere locations. Setup in minutes, not hours.</li>
-      <li><strong>Operator Training Program:</strong> 2-day readiness program. No prior drone experience required. Clean interface. Efficient, repeatable operations from launch to recovery.</li>
-      <li><strong>Past Performance:</strong> Supporting prime contractors in U.S. DoD space since 2020. Project Flytrap 4.5 (Putlos, Germany, Nov 2025). Drone Dominance Program selection.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> C-UAS training, drone swarm training, counter-UAS target drones, military drone training systems, drone threat simulation</p>
-      <p><strong>Schema:</strong> Service, Course</p>
-      <p><strong>AEO Targets:</strong> "How do soldiers train against drone swarms?" · "What is C-UAS training?" · "Who provides drone swarm targets for the US military?" · "What happened at Project Flytrap?"</p>
+    <div class="content-section-title">🎯 Training Systems</div><div class="content-section-url">swarmdefense.com/training-systems</div>
+    <p><strong>Purpose:</strong> C-UAS training and targetry — current revenue driver, proven DoD track record.</p>
+    <p><strong>Page Sections:</strong> Hero ("Preparing Forces for the Swarm Era") · The Threat is Real · Realistic Threat Replication · C-UAS Target Ops · Rapid Deployment · Operator Training Program · Past Performance</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>C-UAS Training &amp; Drone Swarm Targetry Systems — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Realistic counter-UAS training using coordinated drone swarms. Scalable target drone operations for the U.S. military — Group 1 &amp; 2 CONOPs, rapid deployment, and 2-day operator readiness programs.</td></tr>
+        <tr><td>H1</td><td>Preparing Forces for the Swarm Era</td></tr>
+        <tr><td>Primary Keywords</td><td>C-UAS training, counter-UAS target drones, drone swarm training, drone threat simulation, military drone targetry</td></tr>
+        <tr><td>Secondary Keywords</td><td>counter-drone training, swarm attack simulation, drone threat replication, Camp Grayling C-UAS, Project Flytrap</td></tr>
+        <tr><td>Schema</td><td>Service (training), Course (operator program), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/training-systems</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /drones, /software, /capabilities, /press, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"How do soldiers train against drone swarms?" · "What is C-UAS training?" · "Who provides drone swarm targets for the US military?" · "What is Project Flytrap?" · "How long to learn drone swarm operations?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- TEAM -->
+  <!-- TEAM SEO -->
   <div class="content-section">
-    <div class="content-section-title">👥 Team</div>
-    <div class="content-section-url">/team</div>
-    <p><strong>Purpose:</strong> Build credibility and trust. Show the people behind the technology — operators, engineers, and leaders with real-world experience.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Leadership Grid:</strong> Photo, name, title, brief bio, LinkedIn link for each leader.</li>
-      <li><strong>Kyle Dorosz — CEO &amp; Founder:</strong> 8+ years building drone systems. Founded Firefly Drone Shows (200+ shows/year, 7-figure revenue). Pioneer in US drone manufacturing. Visionary behind the dual-use pivot to defense.</li>
-      <li><strong>Adam Wright — President:</strong> Former Navy SEAL. Defense operations expertise. Bridges the gap between military requirements and engineering capabilities.</li>
-      <li><strong>Ryan Sigmon — Co-Founder:</strong> Co-founded Firefly. Drone manufacturing operations. Assembly line design. Manufacturing scaling expertise.</li>
-      <li><strong>Company Story:</strong> Founded as Firefly Drone Shows ~2017. Spun out Swarm Defense in August 2024. From entertainment to national defense — same technology, hardened for the battlefield.</li>
-      <li><strong>By the Numbers:</strong> 47+ employees. 8 years in business. 20,000+ drones produced. $10M+ annual revenue. Cage Code: 12MV3.</li>
-      <li><strong>Join the Team:</strong> Careers section. "Help us build the future of American drone defense." Open positions or general application.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Swarm Defense team, Kyle Dorosz, Swarm Defense leadership, drone startup Detroit</p>
-      <p><strong>Schema:</strong> Organization, Person</p>
-      <p><strong>AEO Targets:</strong> "Who founded Swarm Defense?" · "Who is the CEO of Swarm Defense Technologies?" · "Is Swarm Defense related to Firefly Drone Shows?"</p>
+    <div class="content-section-title">👥 Team</div><div class="content-section-url">swarmdefense.com/team</div>
+    <p><strong>Purpose:</strong> Credibility and trust. Leadership, origin story, company scale, careers.</p>
+    <p><strong>Page Sections:</strong> Leadership Grid · Kyle Dorosz (CEO) · Adam Wright (President, ex-SEAL) · Ryan Sigmon (Co-Founder) · Company Story · By the Numbers · Join the Team</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Our Team | Leadership &amp; Story — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Meet the Swarm Defense leadership team. CEO Kyle Dorosz, President Adam Wright (former Navy SEAL), and co-founder Ryan Sigmon bring 8+ years of drone manufacturing and defense operations experience from Detroit, MI.</td></tr>
+        <tr><td>H1</td><td>The Team Behind the Swarm</td></tr>
+        <tr><td>Primary Keywords</td><td>Swarm Defense team, Kyle Dorosz CEO, Swarm Defense leadership, drone startup Detroit, defense tech team</td></tr>
+        <tr><td>Secondary Keywords</td><td>Firefly Drone Shows founder, Adam Wright Navy SEAL, Auburn Hills drone company, defense tech careers</td></tr>
+        <tr><td>Schema</td><td>Organization, Person (per leader — name, jobTitle, image, sameAs LinkedIn), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/team</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /press, /contact, /blog</td></tr>
+        <tr><td>AEO Targets</td><td>"Who founded Swarm Defense?" · "Who is the CEO of Swarm Defense Technologies?" · "Is Swarm Defense related to Firefly Drone Shows?" · "Is Swarm Defense hiring?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- BLOG -->
+  <!-- BLOG SEO -->
   <div class="content-section">
-    <div class="content-section-title">📝 Blog</div>
-    <div class="content-section-url">/blog</div>
-    <p><strong>Purpose:</strong> SEO content hub. Ongoing articles that drive organic traffic, build thought leadership, and support AEO presence across AI search engines.</p>
-    <p><strong>Content Pillars (Article Categories):</strong></p>
-    <ul>
-      <li><strong>Drone Warfare &amp; Modern Conflict:</strong> Lessons from Ukraine, the future of attritable warfare, drone swarm tactics.</li>
-      <li><strong>Manufacturing &amp; Supply Chain:</strong> American drone manufacturing, NDAA compliance, reshoring defense tech, Detroit's manufacturing renaissance.</li>
-      <li><strong>C-UAS &amp; Training:</strong> Counter-drone strategy, realistic threat replication, training readiness, exercise recaps.</li>
-      <li><strong>Technology Deep-Dives:</strong> Swarm algorithms, deconfliction, software-defined drones, OTA updates, Group 1-3 classifications.</li>
-      <li><strong>Company News &amp; Milestones:</strong> Program selections, capability demos, team growth, partnerships.</li>
-    </ul>
-    <p><strong>Cadence:</strong> 2–4 articles per month. Each article internally links to relevant product/capability pages.</p>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Long-tail targets across all content pillars. Each article targets a specific search intent.</p>
-      <p><strong>Schema:</strong> Blog, BlogPosting, Article</p>
-      <p><strong>AEO Targets:</strong> Every article should answer a specific question that AI search engines might surface — e.g., "Why is the US banning Chinese drones?" · "How are drone swarms used in Ukraine?" · "What is NDAA compliance for drones?"</p>
+    <div class="content-section-title">📝 Blog</div><div class="content-section-url">swarmdefense.com/blog</div>
+    <p><strong>Purpose:</strong> SEO content hub. Ongoing articles for organic traffic, thought leadership, and AEO presence.</p>
+    <p><strong>Content Pillars:</strong> Drone Warfare &amp; Modern Conflict · Manufacturing &amp; Supply Chain · C-UAS &amp; Training · Technology Deep-Dives · Company News. <strong>Cadence:</strong> 2–4/month.</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Blog | Drone Swarm Technology, Defense &amp; Manufacturing Insights — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>Insights on drone swarm technology, counter-UAS strategy, American defense manufacturing, and the future of attritable warfare from Swarm Defense Technologies.</td></tr>
+        <tr><td>H1</td><td>Insights &amp; Intelligence</td></tr>
+        <tr><td>Primary Keywords</td><td>drone swarm blog, defense drone technology, C-UAS news, military drone manufacturing, attritable drone warfare</td></tr>
+        <tr><td>Secondary Keywords</td><td>drone warfare Ukraine, NDAA drone compliance, American drone industry, counter-UAS technology, swarm intelligence</td></tr>
+        <tr><td>Schema</td><td>Blog, CollectionPage, BreadcrumbList. Posts: BlogPosting (headline, datePublished, author, image)</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/blog</td></tr>
+        <tr><td>Internal Links</td><td>Every article links to: /drones, /software, /capabilities, /training-systems, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>Each article targets a specific question: "Why is the US banning Chinese drones?" · "How are drone swarms used in Ukraine?" · "What is NDAA compliance for drones?" · "What is the future of drone warfare?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- PRESS -->
+  <!-- PRESS SEO -->
   <div class="content-section">
-    <div class="content-section-title">📰 Press</div>
-    <div class="content-section-url">/press</div>
-    <p><strong>Purpose:</strong> Centralized media hub. Showcases press coverage and provides press kit for journalists. Major trust signal for DoD decision-makers and investors.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Featured Coverage:</strong> Card grid with logo, headline, publication, date, and link. Key coverage includes:
-        <ul>
-          <li>Fox Business — "American drone company challenges Chinese dominance" (Jan 2026)</li>
-          <li>Defense One — "The Pentagon leans into drone swarms" (Jan 2026)</li>
-          <li>Wall Street Journal — "Factory Towns Revive as Defense Tech Makers Arrive" (Oct 2025)</li>
-          <li>PR Newswire — Drone Dominance Program selection ($1.1B, Feb 2026)</li>
-          <li>Project Flytrap 4.5 — Putlos, Germany (Nov 2025)</li>
-        </ul>
-      </li>
-      <li><strong>Press Releases:</strong> Chronological list of company announcements.</li>
-      <li><strong>Press Kit:</strong> Downloadable logos, executive headshots, company boilerplate, product images.</li>
-      <li><strong>Media Contact:</strong> Direct email and phone for press inquiries.</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Swarm Defense news, Swarm Defense press, drone swarm company news</p>
-      <p><strong>Schema:</strong> NewsArticle, MediaObject</p>
-      <p><strong>AEO Targets:</strong> "What is the Drone Dominance Program?" · "Which companies were selected for the Drone Dominance Program?" · "Is Swarm Defense in the news?"</p>
+    <div class="content-section-title">📰 Press</div><div class="content-section-url">swarmdefense.com/press</div>
+    <p><strong>Purpose:</strong> Media hub. Press coverage, releases, press kit. Trust signal for DoD and investors.</p>
+    <p><strong>Page Sections:</strong> Featured Coverage (Fox Business, Defense One, WSJ, Drone Dominance PR, Project Flytrap) · Press Releases · Press Kit · Media Contact</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Press &amp; Media Coverage — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Swarm Defense in the news. Featured in Fox Business, Defense One, and the Wall Street Journal. Selected for the $1.1B Drone Dominance Program. Download press kit and media assets.</td></tr>
+        <tr><td>H1</td><td>Press &amp; Media</td></tr>
+        <tr><td>Primary Keywords</td><td>Swarm Defense news, Swarm Defense press, drone swarm company news, Drone Dominance Program</td></tr>
+        <tr><td>Secondary Keywords</td><td>Swarm Defense Fox Business, defense drone startup news, Kyle Dorosz interview, military drone press release</td></tr>
+        <tr><td>Schema</td><td>CollectionPage, NewsArticle (per item), MediaObject (press kit), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/press</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /team, /capabilities, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What is the Drone Dominance Program?" · "Which companies were selected for Drone Dominance?" · "Has Swarm Defense been on TV?" · "Is Swarm Defense in the news?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- FAQS -->
+  <!-- FAQS SEO -->
   <div class="content-section">
-    <div class="content-section-title">❓ FAQs</div>
-    <div class="content-section-url">/faqs</div>
-    <p><strong>Purpose:</strong> AEO goldmine. Each FAQ is a chance to appear in AI-generated answers and Google featured snippets. Also reduces friction for potential partners/customers with common questions.</p>
-    <p><strong>Question Categories:</strong></p>
-    <ul>
-      <li><strong>Company:</strong> What is Swarm Defense Technologies? How is Swarm Defense related to Firefly Drone Shows? Where is Swarm Defense headquartered? When was the company founded?</li>
-      <li><strong>Hardware:</strong> What type of drones does Swarm Defense manufacture? What is the Gen2 platform? How much does a Swarm Defense drone cost? How many parts are in a Swarm drone? Are Swarm Defense drones NDAA compliant?</li>
-      <li><strong>Software:</strong> Can one person control an entire drone swarm? What is the Swarm Defense Pilot App? How does swarm deconfliction work? Do you need coding experience to operate the system?</li>
-      <li><strong>Manufacturing:</strong> Where are Swarm Defense drones manufactured? What is the current production capacity? How fast can you scale production? Is the supply chain domestic?</li>
-      <li><strong>Capabilities:</strong> What is C-UAS training? What is the KIWI attack drone? What applications do your drone swarms support? What is CLIK?</li>
-      <li><strong>Partnerships:</strong> How do I request a demo? Does Swarm Defense work with allied governments? Can your software integrate with existing drone platforms? What is the Drone Dominance Program?</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Every FAQ question is a keyword. 20-30 questions = 20-30 AEO entry points.</p>
-      <p><strong>Schema:</strong> FAQPage (CRITICAL — every Q&amp;A pair gets structured markup)</p>
-      <p><strong>AEO Targets:</strong> Each question is designed to match how people ask AI assistants about drone swarm technology, military drones, and Swarm Defense specifically.</p>
+    <div class="content-section-title">❓ FAQs</div><div class="content-section-url">swarmdefense.com/faqs</div>
+    <p><strong>Purpose:</strong> AEO goldmine. 25+ questions = 25+ entry points for AI search and Google featured snippets.</p>
+    <p><strong>Categories:</strong> Company (4 Qs) · Hardware (5 Qs) · Software (4 Qs) · Manufacturing (4 Qs) · Capabilities (4 Qs) · Partnerships (4 Qs)</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>FAQs | Drone Swarm Technology, Manufacturing &amp; Capabilities — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>Frequently asked questions about Swarm Defense — drone hardware, swarm software, manufacturing capacity, C-UAS training, NDAA compliance, and how to request a live demo.</td></tr>
+        <tr><td>H1</td><td>Frequently Asked Questions</td></tr>
+        <tr><td>Primary Keywords</td><td>Swarm Defense FAQ, drone swarm FAQ, military drone questions, C-UAS FAQ, NDAA drone FAQ</td></tr>
+        <tr><td>Secondary Keywords</td><td>how drone swarms work, drone swarm cost, American made drone FAQ, defense drone training FAQ</td></tr>
+        <tr><td>Schema</td><td>FAQPage (CRITICAL — every Q&amp;A pair: @type Question + acceptedAnswer), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/faqs</td></tr>
+        <tr><td>Internal Links</td><td>Each answer links to: /drones, /software, /capabilities, /training-systems, /team, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>Every FAQ IS an AEO target. 25+ entry points for ChatGPT, Perplexity, Gemini, Google AI Overviews.</td></tr>
+      </tbody></table>
     </div>
   </div>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SEO -->
   <div class="content-section">
-    <div class="content-section-title">📞 Contact</div>
-    <div class="content-section-url">/contact</div>
-    <p><strong>Purpose:</strong> Primary conversion destination. "This is not a concept — schedule a live demo." Every page CTA drives here.</p>
-    <p><strong>Sections to Feature:</strong></p>
-    <ul>
-      <li><strong>Hero:</strong> "Schedule a Live Demo" or "Let's Discuss Your Mission Requirements."</li>
-      <li><strong>Contact Form:</strong> Name, organization, email, phone, inquiry type (Demo Request / Partnership / Media / General), message.</li>
-      <li><strong>Direct Contact:</strong> info@swarmdefense.com · 248.990.2754 · Kyle Dorosz, CEO</li>
-      <li><strong>Location:</strong> 1900 Opdyke Ct, Auburn Hills, MI 48326. Embedded map.</li>
-      <li><strong>Calendly/Demo Scheduling:</strong> Embed for direct demo booking if available.</li>
-      <li><strong>Company Identifiers:</strong> Cage Code: 12MV3 · UE ID: RQLSXEWMXG63</li>
-    </ul>
-    <div class="seo-box">
-      <div class="seo-box-title">SEO / AEO Strategy</div>
-      <p><strong>Primary Keywords:</strong> Contact Swarm Defense, Swarm Defense demo, drone swarm demo request</p>
-      <p><strong>Schema:</strong> ContactPage, LocalBusiness</p>
-      <p><strong>AEO Targets:</strong> "How do I contact Swarm Defense?" · "Where is Swarm Defense located?" · "How do I request a drone swarm demo?"</p>
+    <div class="content-section-title">📞 Contact</div><div class="content-section-url">swarmdefense.com/contact</div>
+    <p><strong>Purpose:</strong> Primary conversion page. Every CTA drives here. "This is not a concept — schedule a live demo."</p>
+    <p><strong>Page Sections:</strong> Hero ("Schedule a Live Demo") · Contact Form · Direct Contact · Location &amp; Map · Company IDs (Cage Code, UE ID)</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Contact Us | Schedule a Live Demo — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Contact Swarm Defense to schedule a live drone swarm demo or discuss mission requirements. Auburn Hills, MI. info@swarmdefense.com · 248.990.2754. Cage Code: 12MV3.</td></tr>
+        <tr><td>H1</td><td>Schedule a Live Demo</td></tr>
+        <tr><td>Primary Keywords</td><td>contact Swarm Defense, drone swarm demo, Swarm Defense demo request, Swarm Defense Auburn Hills</td></tr>
+        <tr><td>Secondary Keywords</td><td>military drone demo, defense drone inquiry, Swarm Defense email, drone manufacturer contact</td></tr>
+        <tr><td>Schema</td><td>ContactPage, LocalBusiness (address, geo, phone, email, openingHours), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/contact</td></tr>
+        <tr><td>Internal Links</td><td>/ (home), /capabilities, /training-systems, /press</td></tr>
+        <tr><td>AEO Targets</td><td>"How do I contact Swarm Defense?" · "Where is Swarm Defense located?" · "How do I request a drone swarm demo?" · "What is Swarm Defense's Cage Code?"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- SEO: DRONE SWARM TECHNOLOGY -->
+  <div class="content-section">
+    <div class="content-section-title">🔍 SEO: Drone Swarm Technology</div><div class="content-section-url">swarmdefense.com/drone-swarm-technology</div>
+    <p><strong>Purpose:</strong> National SEO landing page. Educational content positioning Swarm Defense as the authority on drone swarm technology.</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Drone Swarm Technology | How Military Drone Swarms Work — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>Learn how drone swarm technology works — coordination algorithms, autonomous behavior, military applications, and why the U.S. is investing billions in swarm capabilities. From Swarm Defense Technologies.</td></tr>
+        <tr><td>H1</td><td>Drone Swarm Technology: How It Works &amp; Why It Matters</td></tr>
+        <tr><td>Primary Keywords</td><td>drone swarm technology, how drone swarms work, military drone swarm, autonomous drone swarm, swarm intelligence drones</td></tr>
+        <tr><td>Secondary Keywords</td><td>drone swarm coordination, swarm robotics military, drone swarm algorithm, multi-drone system, collaborative autonomous drones</td></tr>
+        <tr><td>Schema</td><td>TechArticle, FAQPage (inline Q&amp;A), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/drone-swarm-technology</td></tr>
+        <tr><td>Internal Links</td><td>/software, /capabilities, /drones, /blog, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What is drone swarm technology?" · "How do drone swarms communicate?" · "Why is the military investing in drone swarms?" · "How many drones can be in a swarm?" · "What is swarm intelligence?"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- SEO: COUNTER-UAS -->
+  <div class="content-section">
+    <div class="content-section-title">🔍 SEO: Counter-UAS Solutions</div><div class="content-section-url">swarmdefense.com/counter-uas-solutions</div>
+    <p><strong>Purpose:</strong> National SEO page. Captures "counter-UAS" and "C-UAS" search traffic. Educates on the threat, positions Swarm's training as the solution.</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Counter-UAS Solutions | C-UAS Training &amp; Drone Threat Simulation — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>Counter-UAS solutions from Swarm Defense. Realistic drone swarm threat simulation, scalable C-UAS target operations, and training systems for coordinated drone attacks.</td></tr>
+        <tr><td>H1</td><td>Counter-UAS Solutions: Realistic Threat Training at Scale</td></tr>
+        <tr><td>Primary Keywords</td><td>counter-UAS solutions, C-UAS training, counter-drone technology, drone threat simulation, C-UAS target drones</td></tr>
+        <tr><td>Secondary Keywords</td><td>anti-drone defense, counter-UAS systems, drone swarm countermeasures, C-UAS testing, counter-drone training program</td></tr>
+        <tr><td>Schema</td><td>Service, TechArticle, FAQPage (inline), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/counter-uas-solutions</td></tr>
+        <tr><td>Internal Links</td><td>/training-systems, /capabilities, /drones, /press, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What is counter-UAS?" · "How do you defend against drone swarms?" · "What is C-UAS training?" · "Who makes counter-drone target systems?" · "What counter-UAS solutions exist?"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- SEO: AMERICAN-MADE DRONES -->
+  <div class="content-section">
+    <div class="content-section-title">🔍 SEO: American-Made Drones</div><div class="content-section-url">swarmdefense.com/american-made-drones</div>
+    <p><strong>Purpose:</strong> Capitalizes on massive search interest around US drone manufacturing, DJI bans, NDAA compliance, and reshoring defense tech.</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>American-Made Military Drones | NDAA Compliant, U.S. Manufactured — Swarm Defense</td></tr>
+        <tr><td>Meta Description</td><td>100% American-made military drones. NDAA-compliant, manufactured in Auburn Hills, MI since 2021. No foreign components. 72,000+ units/year and scaling. Rebuilding the U.S. drone industrial base.</td></tr>
+        <tr><td>H1</td><td>American-Made Military Drones: Built in Detroit, Deployed Worldwide</td></tr>
+        <tr><td>Primary Keywords</td><td>American made military drones, US manufactured drones, NDAA compliant drones, domestic drone manufacturer, made in USA drones</td></tr>
+        <tr><td>Secondary Keywords</td><td>DJI alternative military, non-Chinese military drones, US drone industrial base, reshoring drone manufacturing, Blue UAS list</td></tr>
+        <tr><td>Schema</td><td>Product, TechArticle, LocalBusiness, FAQPage (inline), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/american-made-drones</td></tr>
+        <tr><td>Internal Links</td><td>/drones, /capabilities, /team, /press, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What company makes American military drones?" · "Are there NDAA compliant drones?" · "Why is the US banning Chinese drones?" · "What drones are made in the USA?" · "Who is replacing DJI for the military?"</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- SEO: ATTRITABLE DRONE SYSTEMS -->
+  <div class="content-section">
+    <div class="content-section-title">🔍 SEO: Attritable Drone Systems</div><div class="content-section-url">swarmdefense.com/attritable-drone-systems</div>
+    <p><strong>Purpose:</strong> Targets growing interest in expendable/attritable drone warfare. KIWI attack drone focal. Connects to Drone Dominance Program.</p>
+    <div class="seo-box"><div class="seo-box-title">SEO / AEO — Complete</div>
+      <table>
+        <tbody><tr><td>Meta Title</td><td>Attritable Drone Systems | Low-Cost One-Way Attack Drones — Swarm Defense Technologies</td></tr>
+        <tr><td>Meta Description</td><td>Attritable drone systems from Swarm Defense. The KIWI one-way attack drone: modular payloads, 10+ km range, stackable deployment. Built for volume — when a $5,000 drone eliminates a multimillion-dollar asset, the equation changes.</td></tr>
+        <tr><td>H1</td><td>Attritable Drone Systems: Mass, Speed, and Expendability</td></tr>
+        <tr><td>Primary Keywords</td><td>attritable drones, one-way attack drone, expendable military drones, low-cost attack drone, KIWI drone</td></tr>
+        <tr><td>Secondary Keywords</td><td>loitering munition, kamikaze drone, attritable warfare, Drone Dominance Program, mass-producible attack drone</td></tr>
+        <tr><td>Schema</td><td>Product (KIWI), TechArticle, FAQPage (inline), BreadcrumbList</td></tr>
+        <tr><td>Canonical</td><td>https://swarmdefense.com/attritable-drone-systems</td></tr>
+        <tr><td>Internal Links</td><td>/drones, /capabilities, /software, /press, /contact</td></tr>
+        <tr><td>AEO Targets</td><td>"What is an attritable drone?" · "What is a one-way attack drone?" · "How much do attritable drones cost?" · "What is the KIWI attack drone?" · "What is the Drone Dominance Program?" · "Why are expendable drones important?"</td></tr>
+      </tbody></table>
     </div>
   </div>
 
@@ -1101,154 +512,54 @@
 
 <hr>
 
-<!-- ═══════════════════════════════════════ -->
-<!-- KEY DATA / KNOWLEDGE BASE -->
-<!-- ═══════════════════════════════════════ -->
-
+<!-- SECTION 4: KNOWLEDGE BASE -->
 <div class="section">
   <div class="section-label">🗂️ Swarm Defense — Master Knowledge Base</div>
+  <div class="note" style="margin-bottom: 16px; max-width: 1000px;"><strong>Compiled from:</strong> Capability Statement (July 2025), Pitch Decks (Sept 2025), SwarmDefense.com (current), Firefly Gen2 page, PR Newswire (Feb 2026), Fox Business (Jan 2026), Defense One (Jan 2026), WSJ (Oct 2025), Defense.gov.</div>
 
-  <div class="note" style="margin-bottom: 16px; max-width: 1000px;">
-    <strong>Compiled from:</strong> Capability Statement (July 2025), Pitch Decks (Sept 2025), SwarmDefense.com (current), Firefly Gen2 Drone page, PR Newswire (Feb 2026), Fox Business (Jan 2026), Defense One (Jan 2026), WSJ (Oct 2025), Defense.gov Drone Dominance release.
+  <div class="content-section"><div class="content-section-title">Company Overview</div><ul>
+    <li><strong>Full Name:</strong> Swarm Defense Technologies, LLC</li><li><strong>Founded:</strong> Spun out from Firefly Drone Shows, August 2024</li><li><strong>Parent:</strong> Firefly Drone Shows (~2017, Kyle Dorosz &amp; Ryan Sigmon)</li><li><strong>HQ:</strong> 1900 Opdyke Ct #100, Auburn Hills, MI 48326</li><li><strong>Website:</strong> swarmdefense.com · <strong>Email:</strong> info@swarmdefense.com · <strong>Phone:</strong> 248.990.2754</li><li><strong>CEO:</strong> Kyle Dorosz · <strong>President:</strong> Adam Wright (ex-Navy SEAL) · <strong>Co-Founder:</strong> Ryan Sigmon</li><li><strong>Employees:</strong> 44–47+ · <strong>Revenue:</strong> $10M+ · <strong>Years:</strong> 8 · <strong>Cage Code:</strong> 12MV3 · <strong>UE ID:</strong> RQLSXEWMXG63</li>
+  </ul></div>
+
+  <div class="content-section"><div class="content-section-title">Key Products</div><ul>
+    <li><strong>Gen2 Defense Drone:</strong> Group 1/2. BOM &lt;$700. &lt;20 parts. 50/Pelican 1730. 890g. 30 min hover.</li>
+    <li><strong>KIWI Attack Drone:</strong> One-way. Modular payload. 10+ km. Stackable.</li>
+    <li><strong>Swarm Defense Pilot App:</strong> Device-agnostic. No coding. Waypoints, formations, stacked missions.</li>
+    <li><strong>Swarm Coordination Software:</strong> 1000+ drones. 0.25s response. Licensable.</li>
+    <li><strong>C-UAS Targetry Systems:</strong> Repeatable swarm targets.</li>
+    <li><strong>CLIK:</strong> Common Lethality Integration Kit.</li>
+  </ul></div>
+
+  <div class="content-section"><div class="content-section-title">Manufacturing &amp; Scale</div><ul>
+    <li>Current: 72,000 units/year → Scaling: 250K+ → Vision: 1M+</li>
+    <li>14,000 sq ft factory, Auburn Hills, MI (ex-Qualcomm)</li>
+    <li>Domestic since 2021 · 20K+ drones produced historically · &lt;5 min assembly per drone</li>
+    <li>Fully NDAA-compliant supply chain · All US technology, zero foreign influence</li>
+  </ul></div>
+
+  <div class="content-section"><div class="content-section-title">Major Milestones</div><ul>
+    <li><strong>Feb 2026:</strong> Selected for $1.1B U.S. Drone Dominance Program (1 of 25)</li>
+    <li><strong>Jan 2026:</strong> Fox Business feature · Defense One feature</li>
+    <li><strong>Nov 2025:</strong> Project Flytrap 4.5 — Putlos, Germany</li>
+    <li><strong>Oct 2025:</strong> Wall Street Journal feature</li>
+    <li><strong>Aug 2024:</strong> Spun out from Firefly Drone Shows</li>
+    <li><strong>Since 2020:</strong> Supporting DoD prime contractors · <strong>Since 2017:</strong> Firefly 200+ shows/year</li>
+  </ul></div>
+
+  <div class="content-section"><div class="content-section-title">Key Differentiators</div>
+    <p>Decade of multi-vehicle flight experience · 100+ drone real-world deployments · Proprietary swarm software (1000+ drones, single operator) · New model in weeks, volume in months · BOM under $700 · 100% US-designed/manufactured/NDAA-compliant · 50 drones per Pelican case · Detroit manufacturing DNA · Army, Air Force, Navy customers · Selected for $1.1B Drone Dominance Program</p>
   </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Company Overview</div>
-    <ul>
-      <li><strong>Full Name:</strong> Swarm Defense Technologies, LLC</li>
-      <li><strong>Founded:</strong> Spun out from Firefly Drone Shows in August 2024</li>
-      <li><strong>Parent/Origin:</strong> Firefly Drone Shows (founded ~2017 by Kyle Dorosz &amp; Ryan Sigmon)</li>
-      <li><strong>HQ:</strong> 1900 Opdyke Ct #100, Auburn Hills, MI 48326 (Metro Detroit)</li>
-      <li><strong>Website:</strong> swarmdefense.com</li>
-      <li><strong>Email:</strong> info@swarmdefense.com</li>
-      <li><strong>Phone:</strong> 248.990.2754</li>
-      <li><strong>CEO:</strong> Kyle Dorosz</li>
-      <li><strong>President:</strong> Adam Wright (former Navy SEAL)</li>
-      <li><strong>Co-Founder:</strong> Ryan Sigmon</li>
-      <li><strong>Employees:</strong> 44–47+</li>
-      <li><strong>Annual Revenue:</strong> $10M+</li>
-      <li><strong>Years in Business:</strong> 8 (including Firefly history)</li>
-      <li><strong>Cage Code:</strong> 12MV3</li>
-      <li><strong>UE ID:</strong> RQLSXEWMXG63</li>
-      <li><strong>Status:</strong> Private, Active</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Key Product Lines</div>
-    <ul>
-      <li><strong>Gen2 Defense Drone:</strong> Multi-rotor and fixed-wing platforms. Group 1 &amp; Group 2. BOM &lt;$700. &lt;20 parts. Manual assembly in minutes. 50 per Pelican 1730 case.</li>
-      <li><strong>KIWI Attack Drone:</strong> One-way attack drone. Modular payload capacity. 10+ km operational range. Stackable form factor.</li>
-      <li><strong>Swarm Defense Pilot App:</strong> Device-agnostic mission control. Waypoints, speed profiles, formations. No coding.</li>
-      <li><strong>Swarm Coordination Software:</strong> Controls 1000+ drones simultaneously. 0.25s inter-drone response. Real-time path deconfliction. Available for licensing.</li>
-      <li><strong>C-UAS Targetry Systems:</strong> Repeatable swarm targets for counter-drone training and testing.</li>
-      <li><strong>CLIK — Common Lethality Integration Kit:</strong> Modular kit for adding lethality to drone platforms.</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Technical Specifications (Gen2)</div>
-    <ul>
-      <li>Max Hover Time: 30 Minutes</li>
-      <li>Battery: 45Wh Smart LiPo Battery</li>
-      <li>Charger: 50-Bank Multi Unit Smart Charger</li>
-      <li>Frequencies: 2.4GHz, 915MHz/868MHz</li>
-      <li>GPS: High Precision RTK, F9P L1/L5</li>
-      <li>IMU Sensor Stack: Triple Redundant Thermally Managed</li>
-      <li>Magnetometer: Dual Redundant</li>
-      <li>Transport/Storage: 50 Gen2 drones per Pelican 1730 Transport Case</li>
-      <li>Wireless Power Up: Yes, from Ground Station</li>
-      <li>Country of Origin: Made in the U.S.A.</li>
-      <li>Weight: 890 Grams</li>
-      <li>10 Drone Stacking Height: 585 mm</li>
-      <li>BOM Cost: &lt;$700</li>
-      <li>Parts Count: &lt;20 pieces</li>
-      <li>Assembly Time: Minutes (minimal training and tools)</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Manufacturing &amp; Scale</div>
-    <ul>
-      <li>Current production capacity: 72,000 units/year</li>
-      <li>Scaling to: 250,000+ units/year</li>
-      <li>Long-term vision: 1,000,000+ drones for national security</li>
-      <li>Facility: 14,000 sq ft factory in Auburn Hills, MI (formerly Qualcomm chip factory)</li>
-      <li>Domestic manufacturing since 2021</li>
-      <li>20,000+ drones produced historically for entertainment applications</li>
-      <li>Each drone takes &lt;5 minutes to assemble</li>
-      <li>Fully NDAA-compliant supply chain</li>
-      <li>All designs and software are US technology — no foreign influence</li>
-      <li>Manufacturing can be stood up anywhere in the world</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Major Milestones &amp; Press</div>
-    <ul>
-      <li><strong>Feb 2026:</strong> Selected for $1.1B U.S. Drone Dominance Program (1 of 25 companies)</li>
-      <li><strong>Jan 2026:</strong> Featured on Fox Business — "American drone company challenges Chinese dominance while preparing troops for swarm attacks"</li>
-      <li><strong>Jan 2026:</strong> Featured in Defense One — "The Pentagon leans into drone swarms with a $100M challenge"</li>
-      <li><strong>Nov 2025:</strong> Project Flytrap 4.5 — counter-drone exercise at Putlos, Germany (target drones on display)</li>
-      <li><strong>Oct 2025:</strong> Featured in Wall Street Journal — "Factory Towns Revive as Defense Tech Makers Arrive"</li>
-      <li><strong>Aug 2024:</strong> Swarm Defense Technologies officially spun out from Firefly Drone Shows</li>
-      <li><strong>Since 2020:</strong> Supporting prime contractors in U.S. DoD space with C-UAS services</li>
-      <li><strong>Since 2017:</strong> Firefly Drone Shows operating 200+ light shows per year</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Defense Segments Served</div>
-    <ul>
-      <li>Targetry systems for training applications</li>
-      <li>Software licensing for swarm coordination</li>
-      <li>One-way attack drones (KIWI)</li>
-      <li>C-UAS swarm defense (air base &amp; ground formation)</li>
-      <li>ISR / Surveillance</li>
-      <li>Reusable attack platforms</li>
-      <li>CLIK — Common Lethality Integration Kit</li>
-      <li>Allied government drone systems (export-ready)</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Key Differentiators</div>
-    <ul>
-      <li>Decade of combined experience in coordinated multi-vehicle flight and mission control</li>
-      <li>Proven ability to deploy and manage swarms of 100+ drones in real-world environments</li>
-      <li>Proprietary swarm coordination software — single operator controls 1000+ drones</li>
-      <li>Fast-turn prototyping: new model in weeks, high-volume manufacture in months</li>
-      <li>Commercially proven (200+ drone shows/year) → now hardened for defense</li>
-      <li>BOM under $700 — cost advantage over virtually all competitors</li>
-      <li>100% US-designed, US-manufactured, NDAA-compliant</li>
-      <li>Stackable: 50 drones fit in a single Pelican case for rapid deployment</li>
-      <li>Detroit manufacturing heritage — skilled workforce, assembly line DNA</li>
-      <li>Both Army, Air Force, and Navy are current customers</li>
-    </ul>
-  </div>
-
-  <div class="content-section">
-    <div class="content-section-title">Competitive Landscape Context</div>
-    <ul>
-      <li>Selected alongside companies like Teal Drones, Kratos, Griffon Aerospace, Anduril (indirect), Performance Drone Works in the Drone Dominance Program</li>
-      <li>China (DJI, Autel) dominates global civilian/commercial drone production — US is rebuilding domestic capability</li>
-      <li>FCC added Chinese drone makers to "unacceptable risk" list in late 2025</li>
-      <li>NDAA restrictions limiting foreign-sourced components in defense procurement</li>
-      <li>Swarm's edge: actual production volume + proven swarm software (not just prototypes)</li>
-    </ul>
-  </div>
-
 </div>
 
 <hr>
 
 <div class="note" style="margin: 0 auto; max-width: 1000px;">
   <strong>How This Tracker Works:</strong><br><br>
-  <strong>1. Status updates:</strong> When a page category is completed, tell Claude which page and which category (Design, Dev, SEO, Content, Sanity) to mark as complete. Claude will update the pill from ○ Not Started → ✓ Completed and recalculate progress bars.<br><br>
+  <strong>1. Status updates:</strong> When a page category is completed, tell Claude which page and which category (Design, Dev, SEO, Content, Sanity) to mark as complete. Claude will update the pill and recalculate progress bars.<br><br>
   <strong>2. Git workflow:</strong> After each update, save the updated HTML and push to the Git repo so the client always sees current status.<br><br>
   <strong>3. SEO/AEO pages:</strong> Additional landing pages can be added to Section 2 as keyword research identifies new opportunities.<br><br>
-  <strong>4. Blog articles:</strong> Individual blog post pages are not tracked here — they're self-explanatory and managed through Sanity. The /blog listing page itself IS tracked.<br><br>
-  <strong>5. Knowledge base:</strong> Section 4 (Master Knowledge Base) serves as the single source of truth for all content creation across the site. Update as new information becomes available.
+  <strong>4. Blog articles:</strong> Individual posts managed through Sanity. The /blog listing page itself IS tracked.<br><br>
+  <strong>5. Knowledge base:</strong> Section 4 serves as single source of truth for all content creation. Update as new info becomes available.
 </div>
 
 
