@@ -30,7 +30,7 @@
   .legend-grid .lg-header { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #999; padding-bottom: 4px; border-bottom: 1px solid #eee; }
   .legend-grid .lg-label { font-size: 11px; font-weight: 600; color: #444; display: flex; align-items: center; gap: 6px; }
   .legend-grid .lg-label .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-  .dot-design { background: #6366f1; } .dot-dev { background: #f59e0b; } .dot-seo { background: #ef4444; } .dot-content { background: #10b981; } .dot-sanity { background: #8b5cf6; } .dot-content-created { background: #0ea5e9; }
+  .dot-design { background: #6366f1; } .dot-dev { background: #f59e0b; } .dot-seo { background: #10b981; } .dot-content { background: #ef4444; } .dot-sanity { background: #8b5cf6; } .dot-content-created { background: #0ea5e9; }
   .legend-grid .lg-status { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #666; }
 
   .status-bar { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
@@ -40,14 +40,14 @@
   .status-pill.in-progress { border-style: solid; }
   .status-pill.in-progress.design { background: #eef0ff; border-color: #6366f1; color: #6366f1; }
   .status-pill.in-progress.dev { background: #fef8ec; border-color: #f59e0b; color: #b87708; }
-  .status-pill.in-progress.seo-tag { background: #fef0f0; border-color: #ef4444; color: #dc2626; }
-  .status-pill.in-progress.content { background: #ecfdf5; border-color: #10b981; color: #059669; }
+  .status-pill.in-progress.seo-tag { background: #ecfdf5; border-color: #10b981; color: #059669; }
+  .status-pill.in-progress.content { background: #fef0f0; border-color: #ef4444; color: #dc2626; }
   .status-pill.in-progress.sanity { background: #f3f0ff; border-color: #8b5cf6; color: #7c3aed; }
   .status-pill.completed { color: #fff; }
   .status-pill.completed.design { background: #6366f1; border-color: #6366f1; }
   .status-pill.completed.dev { background: #f59e0b; border-color: #f59e0b; color: #fff; }
-  .status-pill.completed.seo-tag { background: #ef4444; border-color: #ef4444; }
-  .status-pill.completed.content { background: #10b981; border-color: #10b981; }
+  .status-pill.completed.seo-tag { background: #10b981; border-color: #10b981; }
+  .status-pill.completed.content { background: #ef4444; border-color: #ef4444; }
   .status-pill.completed.sanity { background: #8b5cf6; border-color: #8b5cf6; }
 
   .section { margin-bottom: 56px; }
@@ -85,7 +85,7 @@
   .progress-label { font-size: 12px; font-weight: 600; color: #444; min-width: 120px; display: flex; align-items: center; gap: 6px; }
   .progress-track { flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; max-width: 300px; }
   .progress-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
-  .progress-fill.design { background: #6366f1; } .progress-fill.dev { background: #f59e0b; } .progress-fill.seo-tag { background: #ef4444; } .progress-fill.content { background: #10b981; } .progress-fill.sanity { background: #8b5cf6; }
+  .progress-fill.design { background: #6366f1; } .progress-fill.dev { background: #f59e0b; } .progress-fill.seo-tag { background: #10b981; } .progress-fill.content { background: #ef4444; } .progress-fill.sanity { background: #8b5cf6; }
   .progress-pct { font-size: 12px; font-weight: 700; color: #444; min-width: 40px; }
 
   .content-section { background: #fff; border: 1.5px solid #d4d4cd; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
@@ -95,19 +95,35 @@
   .content-section strong { color: #0f1c20; }
   .content-section ul { font-size: 12px; color: #555; line-height: 1.6; margin-left: 18px; margin-bottom: 8px; }
 
-  .seo-box { background: #fef0f0; border: 1.5px solid #ef4444; border-radius: 6px; padding: 14px 18px; margin-top: 12px; }
-  .seo-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #dc2626; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-  .seo-box-title::before { content: '✓'; background: #ef4444; color: #fff; font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+  .seo-box { background: #f0fdf4; border: 1.5px solid #10b981; border-radius: 6px; padding: 14px 18px; margin-top: 12px; }
+  .seo-box-title { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #059669; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .seo-box-title::before { content: '✓'; background: #10b981; color: #fff; font-size: 9px; width: 16px; height: 16px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
   .seo-box p { font-size: 11px; margin-bottom: 4px; color: #555; }
   .seo-box table { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 8px; }
-  .seo-box table td { padding: 4px 8px; border-bottom: 1px solid #f5e0e0; vertical-align: top; }
+  .seo-box table td { padding: 4px 8px; border-bottom: 1px solid #d4f0e4; vertical-align: top; }
   .seo-box table td:first-child { font-weight: 700; color: #0f1c20; white-space: nowrap; width: 140px; }
 
   /* ── Content Created status ── */
   .status-pill.in-progress.content-created { background: #e0f2fe; border-color: #0ea5e9; color: #0369a1; }
   .status-pill.completed.content-created { background: #0ea5e9; border-color: #0ea5e9; color: #fff; }
   .progress-fill.content-created { background: #0ea5e9; }
-/* ══════════════════════════════════════════════════════
+
+  /* ── Rings progress chart ── */
+  .progress-summary { display: flex; align-items: center; gap: 40px; }
+  .progress-bars-col { flex: 1; min-width: 0; }
+  .rings-chart-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; flex-shrink: 0; }
+  .rings-svg-container { position: relative; width: 160px; height: 160px; }
+  .rings-svg-container svg { transform: rotate(-90deg); overflow: visible; }
+  .ring-bg { fill: none; stroke: #eeede8; stroke-width: 8; stroke-linecap: round; }
+  .ring-fill { fill: none; stroke-width: 8; stroke-linecap: round; stroke-dasharray: 0 1000; transition: stroke-dasharray 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
+  .rings-center-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; pointer-events: none; }
+  .rings-overall-pct { display: block; font-size: 20px; font-weight: 700; color: #0d2e3f; line-height: 1; }
+  .rings-overall-label { display: block; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: #bbb; margin-top: 3px; }
+  .rings-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+  .rings-legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #777; font-weight: 500; white-space: nowrap; }
+  .rings-legend-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ══════════════════════════════════════════════════════
      THEME TOGGLE BUTTON
   ══════════════════════════════════════════════════════ */
   .theme-toggle {
@@ -314,6 +330,11 @@
   [data-theme="dark"] .content-section .seo-box-title { color: #aaaaaa; }
 
   [data-theme="dark"] .content-section .seo-box p { color: #5a8aa3; }
+
+  [data-theme="dark"] .ring-bg { stroke: #252525; }
+  [data-theme="dark"] .rings-overall-pct { color: #e8e8e4; }
+  [data-theme="dark"] .rings-overall-label { color: #484844; }
+  [data-theme="dark"] .rings-legend-item { color: #555552; }
 </style>
 </head>
 <body>
@@ -365,6 +386,7 @@
 
 <!-- OVERALL PROGRESS -->
 <div class="progress-summary">
+  <div class="progress-bars-col">
   <div class="progress-summary-title">Overall Project Progress</div>
   <div class="progress-row"><div class="progress-label"><span class="dot dot-design"></span> Design</div><div class="progress-track"><div class="progress-fill design" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
   <div class="progress-row"><div class="progress-label"><span class="dot dot-dev"></span> Development</div><div class="progress-track"><div class="progress-fill dev" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
@@ -372,6 +394,37 @@
   <div class="progress-row"><div class="progress-label"><span class="dot dot-content"></span> Content Input</div><div class="progress-track"><div class="progress-fill content" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
   <div class="progress-row"><div class="progress-label"><span class="dot dot-sanity"></span> Sanity Dev</div><div class="progress-track"><div class="progress-fill sanity" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
   <div class="progress-row"><div class="progress-label"><span class="dot dot-content-created"></span> Content Created</div><div class="progress-track"><div class="progress-fill content-created" style="width: 0%;"></div></div><div class="progress-pct">0%</div></div>
+  </div>
+  <div class="rings-chart-wrap">
+    <div class="rings-svg-container">
+      <svg viewBox="0 0 160 160" width="160" height="160" xmlns="http://www.w3.org/2000/svg">
+        <circle class="ring-bg" cx="80" cy="80" r="15"/>
+        <circle class="ring-bg" cx="80" cy="80" r="25"/>
+        <circle class="ring-bg" cx="80" cy="80" r="35"/>
+        <circle class="ring-bg" cx="80" cy="80" r="45"/>
+        <circle class="ring-bg" cx="80" cy="80" r="55"/>
+        <circle class="ring-bg" cx="80" cy="80" r="65"/>
+        <circle id="ring-design"  class="ring-fill" cx="80" cy="80" r="15" stroke="#6366f1"/>
+        <circle id="ring-dev"     class="ring-fill" cx="80" cy="80" r="25" stroke="#f59e0b"/>
+        <circle id="ring-seo"     class="ring-fill" cx="80" cy="80" r="35" stroke="#10b981"/>
+        <circle id="ring-content" class="ring-fill" cx="80" cy="80" r="45" stroke="#ef4444"/>
+        <circle id="ring-sanity"  class="ring-fill" cx="80" cy="80" r="55" stroke="#8b5cf6"/>
+        <circle id="ring-created" class="ring-fill" cx="80" cy="80" r="65" stroke="#0ea5e9"/>
+      </svg>
+      <div class="rings-center-label">
+        <span class="rings-overall-pct" id="pieOverallPct">0%</span>
+        <span class="rings-overall-label">Overall</span>
+      </div>
+    </div>
+    <div class="rings-legend">
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#6366f1"></span>Design</div>
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#ef4444"></span>Content</div>
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#f59e0b"></span>Dev</div>
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#8b5cf6"></span>Sanity</div>
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#10b981"></span>SEO</div>
+      <div class="rings-legend-item"><span class="rings-legend-dot" style="background:#0ea5e9"></span>Created</div>
+    </div>
+  </div>
 </div>
 
 <!-- SECTION 1: MAIN WEBSITE SITEMAP -->
@@ -830,6 +883,41 @@
       });
     }
   })();
+
+  // ── Ring chart animation ──
+  document.addEventListener('DOMContentLoaded', function() {
+    var ringIds   = ['ring-design','ring-dev','ring-seo','ring-content','ring-sanity','ring-created'];
+    var ringRadii = [15, 25, 35, 45, 55, 65];
+    var fills     = document.querySelectorAll('.progress-fill');
+
+    // Overall %
+    var total = 0;
+    fills.forEach(function(f) {
+      total += parseFloat(f.getAttribute('data-target') || f.style.width) || 0;
+    });
+    var pctEl = document.getElementById('pieOverallPct');
+    if (pctEl) pctEl.textContent = Math.round(total / (fills.length || 1)) + '%';
+
+    // Init rings to zero
+    ringIds.forEach(function(id, idx) {
+      var el = document.getElementById(id);
+      if (el) el.setAttribute('stroke-dasharray', '0 ' + (2 * Math.PI * ringRadii[idx]).toFixed(1));
+    });
+
+    // Staggered fill
+    setTimeout(function() {
+      fills.forEach(function(fill, i) {
+        if (i >= ringIds.length) return;
+        setTimeout(function() {
+          var pct  = parseFloat(fill.getAttribute('data-target')) || 0;
+          var circ = (2 * Math.PI * ringRadii[i]).toFixed(1);
+          var el   = document.getElementById(ringIds[i]);
+          if (el) el.setAttribute('stroke-dasharray', ((pct / 100) * circ).toFixed(1) + ' ' + circ);
+        }, i * 200);
+      });
+    }, 120);
+  });
+
 </script>
 
 </body></html>
