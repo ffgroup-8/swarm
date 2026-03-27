@@ -123,6 +123,18 @@
   .rings-legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; color: #777; font-weight: 500; white-space: nowrap; }
   .rings-legend-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
 
+  
+  /* ── Anchor navigation ── */
+  html { scroll-behavior: smooth; }
+  [data-anchor] { cursor: pointer; }
+  .node[data-anchor] { transition: background 0.15s ease, border-color 0.15s ease; }
+  .node[data-anchor]:hover { background: #f5f4ef; border-color: #b5b5af; }
+  .node.home[data-anchor]:hover { background: #f5f4ef; }
+  .nav-item[data-anchor] { transition: background 0.15s ease; }
+  .nav-item[data-anchor]:hover { background: rgba(255,255,255,0.09); }
+  [data-theme="dark"] .node[data-anchor]:hover { background: #202020; border-color: #3a3a38; }
+  [data-theme="dark"] .nav-item[data-anchor]:hover { background: rgba(255,255,255,0.06); }
+
   /* ══════════════════════════════════════════════════════
      THEME TOGGLE BUTTON
   ══════════════════════════════════════════════════════ */
@@ -431,7 +443,7 @@
 <div class="section">
   <div class="section-label">🛡️ Swarm Defense — Website Sitemap</div>
   <div class="tree-root">
-    <div class="node home">
+    <div class="node home" data-anchor="page-home">
       <div class="node-title">HOME</div>
       <div class="node-desc">Hardware-forward: KIWI attack drone, Swarm Threat Emulator, Gen2 platform. Software: Pilot App &amp; swarm coordination engine. Built in USA, mission-ready CTA.</div>
       <div class="node-url">/</div>
@@ -460,25 +472,25 @@
       <div class="column">
         <div class="group-box">
           <div class="group-label">Product &amp; Technology</div>
-          <div class="node" style="margin-top: 8px;"><div class="node-title">Drones <span class="badge">FLAGSHIP</span></div><div class="node-desc">Gen2 drone platform showcase. Airframe, specs, exploded view, modular payloads, stackable design, BOM under $700.</div><div class="node-url">/drones</div><span class="tag flagship">Flagship — Hardware Deep-Dive</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" style="margin-top: 8px;" data-anchor="page-drones"><div class="node-title">Drones <span class="badge">FLAGSHIP</span></div><div class="node-desc">Gen2 drone platform showcase. Airframe, specs, exploded view, modular payloads, stackable design, BOM under $700.</div><div class="node-url">/drones</div><span class="tag flagship">Flagship — Hardware Deep-Dive</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">Software</div><div class="node-desc">Swarm Defense Pilot App, swarm coordination OS, real-time deconfliction, OTA updates, device-agnostic control. Single operator → 1000+ drones.</div><div class="node-url">/software</div><span class="tag product">Core Differentiator</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-software"><div class="node-title">Software</div><div class="node-desc">Swarm Defense Pilot App, swarm coordination OS, real-time deconfliction, OTA updates, device-agnostic control. Single operator → 1000+ drones.</div><div class="node-url">/software</div><span class="tag product">Core Differentiator</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">Capabilities</div><div class="node-desc">Mission applications: C-UAS Swarm, C-UAS Target, Attritable Attack, ISR/Surveillance, Reusable Attack, CLIK, KIWI.</div><div class="node-url">/capabilities</div><span class="tag capability">Mission Matrix</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-capabilities"><div class="node-title">Capabilities</div><div class="node-desc">Mission applications: C-UAS Swarm, C-UAS Target, Attritable Attack, ISR/Surveillance, Reusable Attack, CLIK, KIWI.</div><div class="node-url">/capabilities</div><span class="tag capability">Mission Matrix</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">Training Systems</div><div class="node-desc">C-UAS training &amp; targetry. Realistic threat replication for DoD. Scalable swarm simulations. 2-day operator readiness.</div><div class="node-url">/training-systems</div><span class="tag capability">Revenue Driver</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-training"><div class="node-title">Training Systems</div><div class="node-desc">C-UAS training &amp; targetry. Realistic threat replication for DoD. Scalable swarm simulations. 2-day operator readiness.</div><div class="node-url">/training-systems</div><span class="tag capability">Revenue Driver</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
         </div>
       </div>
       <div class="column">
         <div class="group-box">
           <div class="group-label">Company &amp; Content</div>
-          <div class="node" style="margin-top: 8px;"><div class="node-title">Team</div><div class="node-desc">Leadership bios: Kyle Dorosz (CEO), Adam Wright (President, ex-Navy SEAL), Ryan Sigmon (Co-Founder). "Join Our Team."</div><div class="node-url">/team</div><span class="tag trust">Credibility &amp; Trust</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" style="margin-top: 8px;" data-anchor="page-team"><div class="node-title">Team</div><div class="node-desc">Leadership bios: Kyle Dorosz (CEO), Adam Wright (President, ex-Navy SEAL), Ryan Sigmon (Co-Founder). "Join Our Team."</div><div class="node-url">/team</div><span class="tag trust">Credibility &amp; Trust</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">Press</div><div class="node-desc">Blog-roll style page. Link-outs to 3rd party coverage: Fox Business, Defense One, WSJ. Drone Dominance PR. Press kit &amp; media contact. Primary content hub.</div><div class="node-url">/press</div><span class="tag trust">Content Hub / Social Proof</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-press"><div class="node-title">Press</div><div class="node-desc">Blog-roll style page. Link-outs to 3rd party coverage: Fox Business, Defense One, WSJ. Drone Dominance PR. Press kit &amp; media contact. Primary content hub.</div><div class="node-url">/press</div><span class="tag trust">Content Hub / Social Proof</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">FAQs</div><div class="node-desc">25+ questions. FAQPage schema. Covers drones, software, manufacturing, compliance, training, partnerships. AEO goldmine.</div><div class="node-url">/faqs</div><span class="tag seo">AEO / Schema Goldmine</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-faqs"><div class="node-title">FAQs</div><div class="node-desc">25+ questions. FAQPage schema. Covers drones, software, manufacturing, compliance, training, partnerships. AEO goldmine.</div><div class="node-url">/faqs</div><span class="tag seo">AEO / Schema Goldmine</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
           <div class="connector"></div>
-          <div class="node"><div class="node-title">Contact</div><div class="node-desc">"Schedule a Live Demo." Contact form, email, phone. Auburn Hills, MI. Calendly or demo request embed.</div><div class="node-url">/contact</div><span class="tag conversion">Primary CTA Destination</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
+          <div class="node" data-anchor="page-contact"><div class="node-title">Contact</div><div class="node-desc">"Schedule a Live Demo." Contact form, email, phone. Auburn Hills, MI. Calendly or demo request embed.</div><div class="node-url">/contact</div><span class="tag conversion">Primary CTA Destination</span><div class="status-bar"><span class="status-pill not-started design"><span class="pill-icon">○</span> Design</span><span class="status-pill not-started dev"><span class="pill-icon">○</span> Dev</span><span class="status-pill completed seo-tag"><span class="pill-icon">✓</span> SEO</span><span class="status-pill not-started content"><span class="pill-icon">○</span> Content</span><span class="status-pill not-started sanity"><span class="pill-icon">○</span> Sanity</span><span class="status-pill not-started content-created"><span class="pill-icon">○</span> Created</span></div></div>
         </div>
       </div>
     </div>
@@ -495,7 +507,7 @@
   <div class="section-label">🔍 Complete SEO / AEO Build-Out — All Pages (13/13 Complete)</div>
 
   <!-- HOME SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-home">
     <div class="content-section-title">🏠 Home</div><div class="content-section-url">swarmdefense.com/</div>
     <p><strong>Purpose:</strong> First impression. Lead with hardware platforms and software — the two things that define Swarm Defense. Establish authority, convey scale, drive to demo request.</p>
     <p><strong>Page Sections (Hardware &amp; Software Forward):</strong></p>
@@ -530,7 +542,7 @@
   </div>
 
   <!-- DRONES SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-drones">
     <div class="content-section-title">🛩️ Drones (Gen2 Platform)</div><div class="content-section-url">swarmdefense.com/drones</div>
     <p><strong>Purpose:</strong> Flagship hardware page. Gen2 drone platform — specs, design philosophy, scale manufacturing.</p>
     <p><strong>Page Sections:</strong> Hero ("Gen2 Defense Platform") · We Own the Stack · Tech Specs Table · Design for Scale · Modular Payloads · Blade Configurations · KIWI Attack Drone Teaser</p>
@@ -550,7 +562,7 @@
   </div>
 
   <!-- SOFTWARE SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-software">
     <div class="content-section-title">💻 Software</div><div class="content-section-url">swarmdefense.com/software</div>
     <p><strong>Purpose:</strong> Core differentiator — proprietary swarm coordination software. One operator controlling 1000+ drones.</p>
     <p><strong>Page Sections:</strong> Hero ("One Operator. Thousands of Drones.") · Pilot App · Swarm Coordination Engine · Software-Defined Platforms · Ground Station · Software Licensing · Operator Training</p>
@@ -570,7 +582,7 @@
   </div>
 
   <!-- CAPABILITIES SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-capabilities">
     <div class="content-section-title">⚡ Capabilities</div><div class="content-section-url">swarmdefense.com/capabilities</div>
     <p><strong>Purpose:</strong> Mission application matrix — full breadth of Swarm Defense systems across defense segments.</p>
     <p><strong>Page Sections:</strong> Hero ("Mission-Ready Across the Spectrum") · C-UAS Swarm Defense · C-UAS Targetry · Attritable Attack / KIWI · ISR/Surveillance · Reusable Attack · CLIK · Manufacturing at Scale · Design-to-Deployment Speed</p>
@@ -590,7 +602,7 @@
   </div>
 
   <!-- TRAINING SYSTEMS SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-training">
     <div class="content-section-title">🎯 Training Systems</div><div class="content-section-url">swarmdefense.com/training-systems</div>
     <p><strong>Purpose:</strong> C-UAS training and targetry — current revenue driver, proven DoD track record.</p>
     <p><strong>Page Sections:</strong> Hero ("Preparing Forces for the Swarm Era") · The Threat is Real · Realistic Threat Replication · C-UAS Target Ops · Rapid Deployment · Operator Training Program · Past Performance</p>
@@ -610,7 +622,7 @@
   </div>
 
   <!-- TEAM SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-team">
     <div class="content-section-title">👥 Team</div><div class="content-section-url">swarmdefense.com/team</div>
     <p><strong>Purpose:</strong> Credibility and trust. Leadership, origin story, company scale, careers.</p>
     <p><strong>Page Sections:</strong> Leadership Grid · Kyle Dorosz (CEO) · Adam Wright (President, ex-SEAL) · Ryan Sigmon (Co-Founder) · Company Story · By the Numbers · Join the Team</p>
@@ -630,7 +642,7 @@
   </div>
 
   <!-- PRESS SEO (Blog-Roll / Content Hub) -->
-  <div class="content-section">
+  <div class="content-section" id="page-press">
     <div class="content-section-title">📰 Press (Content Hub)</div><div class="content-section-url">swarmdefense.com/press</div>
     <p><strong>Purpose:</strong> Blog-roll style content hub. Chronological feed of cards linking out to 3rd party press coverage. Also houses press releases and press kit. Serves as the primary content/news page (replaces a traditional blog).</p>
     <p><strong>Page Format:</strong></p>
@@ -666,7 +678,7 @@
   </div>
 
   <!-- FAQS SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-faqs">
     <div class="content-section-title">❓ FAQs</div><div class="content-section-url">swarmdefense.com/faqs</div>
     <p><strong>Purpose:</strong> AEO goldmine. 25+ questions = 25+ entry points for AI search and Google featured snippets.</p>
     <p><strong>Categories:</strong> Company (4 Qs) · Hardware (5 Qs) · Software (4 Qs) · Manufacturing (4 Qs) · Capabilities (4 Qs) · Partnerships (4 Qs)</p>
@@ -686,7 +698,7 @@
   </div>
 
   <!-- CONTACT SEO -->
-  <div class="content-section">
+  <div class="content-section" id="page-contact">
     <div class="content-section-title">📞 Contact</div><div class="content-section-url">swarmdefense.com/contact</div>
     <p><strong>Purpose:</strong> Primary conversion page. Every CTA drives here. "This is not a concept — schedule a live demo."</p>
     <p><strong>Page Sections:</strong> Hero ("Schedule a Live Demo") · Contact Form · Direct Contact · Location &amp; Map · Company IDs (Cage Code, UE ID)</p>
@@ -916,6 +928,17 @@
         }, i * 200);
       });
     }, 120);
+  });
+
+
+  // ── Anchor link navigation ──
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('[data-anchor]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var target = document.getElementById(el.getAttribute('data-anchor'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   });
 
 </script>
