@@ -1,0 +1,3876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swarm Defense Technologies — American-Made Autonomous Drone Systems</title>
+<meta name="description" content="Swarm Defense Technologies designs and manufactures autonomous drone swarm systems in Auburn Hills, MI. NDAA-compliant, American-made defense drones for the U.S. Department of Defense.">
+<meta name="keywords" content="defense drones, drone swarm technology, American-made drones, NDAA-compliant drones, autonomous drone systems, counter-UAS, attritable drones">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Swarm Defense Technologies — American-Made Autonomous Drone Systems">
+<meta property="og:description" content="Defense drones designed and built in the United States. All hardware, software, and electronics manufactured in-house in Auburn Hills, MI.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://swarmdefense.com">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Swarm Defense Technologies",
+  "url": "https://swarmdefense.com",
+  "description": "American-made autonomous drone swarm systems for defense applications. NDAA-compliant, designed and manufactured in Auburn Hills, MI.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Auburn Hills",
+    "addressRegion": "MI",
+    "addressCountry": "US"
+  },
+  "sameAs": []
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Kiwi Attack Drone",
+  "description": "America's smallest detonation drone. Designed for autonomous swarm operations with 65 km/h max speed, 45 min flight time, and 10 km range.",
+  "brand": {
+    "@type": "Brand",
+    "name": "Swarm Defense Technologies"
+  },
+  "manufacturer": {
+    "@type": "Organization",
+    "name": "Swarm Defense Technologies",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Auburn Hills",
+      "addressRegion": "MI",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is drone swarm technology?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drone swarm technology enables multiple autonomous drones to operate as a coordinated unit, sharing data and adapting to mission objectives in real time without individual pilot control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Swarm Defense drones NDAA compliant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. All Swarm Defense hardware, software, and electronics are designed and manufactured in-house at our Auburn Hills, Michigan facility. Our entire supply chain is NDAA-compliant and domestic since 2021."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Kiwi Attack Drone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Kiwi is America's smallest detonation drone, capable of 65 km/h speeds, 45-minute flight times, and a 10 km operational range with a 2.5 kg payload capacity."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ============================================
+     CSS CUSTOM PROPERTIES
+     ============================================ */
+  :root {
+    --navy-900: #081418;
+    --navy-800: #0d1d23;
+    --navy-700: #2e3b43;
+    --sand-700: #e3dfd4;
+    --sand-600: #d4d0c5;
+    --white-900: #fffffd;
+    --border-dark: #2a3a3f;
+    --border-light: #cbd3d6;
+    --accent-teal: #3bb8c3;
+    --accent-amber: #c4943a;
+    --text-muted: #998e73;
+    --font-display: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* ============================================
+     RESET & BASE
+     ============================================ */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--navy-900);
+    color: var(--white-900);
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { border: none; background: none; cursor: pointer; font-family: inherit; color: inherit; }
+
+  /* ============================================
+     LAYOUT
+     ============================================ */
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 48px;
+  }
+
+  .rail {
+    border-left: 1px solid var(--border-dark);
+    border-right: 1px solid var(--border-dark);
+  }
+
+  /* ============================================
+     REVEAL ANIMATIONS
+     ============================================ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  }
+
+  .reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+  }
+
+  .reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 1s var(--ease-out-expo), transform 1s var(--ease-out-expo);
+  }
+
+  .reveal-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger children */
+  .stagger > .reveal:nth-child(1) { transition-delay: 0s; }
+  .stagger > .reveal:nth-child(2) { transition-delay: 0.1s; }
+  .stagger > .reveal:nth-child(3) { transition-delay: 0.2s; }
+  .stagger > .reveal:nth-child(4) { transition-delay: 0.3s; }
+  .stagger > .reveal:nth-child(5) { transition-delay: 0.4s; }
+
+  /* ============================================
+     GRAIN OVERLAY
+     ============================================ */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+  }
+
+  /* ============================================
+     SCANLINE EFFECT (SUBTLE)
+     ============================================ */
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+  }
+
+  /* ============================================
+     HEADER / NAV
+     ============================================ */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(8, 20, 24, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(97, 98, 111, 0.3);
+    transition: background 0.4s ease, transform 0.4s var(--ease-out-expo);
+  }
+
+  .site-header.scrolled {
+    background: rgba(8, 20, 24, 0.92);
+  }
+
+  .site-header.hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 32px;
+    border-left: 1px solid rgba(97, 98, 111, 0.3);
+    border-right: 1px solid rgba(97, 98, 111, 0.3);
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--white-900);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    background: var(--white-900);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .logo-mark::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    background: var(--navy-900);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .nav-link {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 253, 0.7);
+    position: relative;
+    padding: 28px 0;
+    letter-spacing: -0.16px;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-teal);
+    transition: width 0.4s var(--ease-out-expo);
+  }
+
+  .nav-link:hover {
+    color: var(--white-900);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link .plus {
+    font-size: 10px;
+    opacity: 0.5;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-link:hover .plus {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--white-900);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .header-cta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 253, 0.3);
+    color: var(--white-900);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--white-900);
+    transform: translateY(100%);
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+
+  .header-cta:hover {
+    color: var(--navy-900);
+    border-color: var(--white-900);
+  }
+
+  .header-cta:hover::before {
+    transform: translateY(0);
+  }
+
+  .header-cta span {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8,20,24,0.4) 0%, rgba(8,20,24,0.2) 40%, rgba(8,20,24,0.6) 100%);
+    z-index: 1;
+  }
+
+  .hero-bg video,
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-bg .color-wash {
+    position: absolute;
+    inset: 0;
+    background: rgba(128, 140, 120, 0.15);
+    mix-blend-mode: hard-light;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  /* Corner bracket frame */
+  .bracket-frame {
+    position: relative;
+    padding: 4px;
+  }
+
+  .bracket-frame::before,
+  .bracket-frame::after,
+  .bracket-frame .corner-bl,
+  .bracket-frame .corner-br {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-color: var(--white-900);
+    border-style: solid;
+    transition: all 0.5s var(--ease-out-expo);
+  }
+
+  .bracket-frame::before {
+    top: 0; left: 0;
+    border-width: 1px 0 0 1px;
+  }
+
+  .bracket-frame::after {
+    top: 0; right: 0;
+    border-width: 1px 1px 0 0;
+  }
+
+  .bracket-frame .corner-bl {
+    bottom: 0; left: 0;
+    border-width: 0 0 1px 1px;
+  }
+
+  .bracket-frame .corner-br {
+    bottom: 0; right: 0;
+    border-width: 0 1px 1px 0;
+  }
+
+  .bracket-frame:hover::before,
+  .bracket-frame:hover::after,
+  .bracket-frame:hover .corner-bl,
+  .bracket-frame:hover .corner-br {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-video-frame {
+    width: min(760px, 85vw);
+    margin: 0 auto;
+  }
+
+  .hero-video-inner {
+    aspect-ratio: 16/9;
+    background: rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-video-inner img,
+  .hero-video-inner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-video-play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hero-video-play:hover {
+    background: rgba(0,0,0,0.1);
+  }
+
+  .play-btn {
+    width: 72px;
+    height: 72px;
+    border: 2px solid rgba(255,255,253,0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .play-btn::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent var(--white-900);
+    margin-left: 4px;
+  }
+
+  .hero-video-play:hover .play-btn {
+    transform: scale(1.1);
+    border-color: var(--white-900);
+    background: rgba(255,255,253,0.1);
+  }
+
+  /* Watch Demo CTA under video */
+  .demo-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 32px;
+    margin-top: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .demo-cta-text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--white-900);
+    letter-spacing: -0.16px;
+  }
+
+  .demo-cta svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--white-900);
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+
+  .demo-cta:hover svg {
+    transform: scale(1.15);
+  }
+
+  /* Corner accents on CTA */
+  .corner-cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    cursor: pointer;
+  }
+
+  .corner-cta::before,
+  .corner-cta::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .corner-cta::before {
+    top: 0; left: 0;
+    border-top: 1px solid rgba(255,255,253,0.4);
+    border-left: 1px solid rgba(255,255,253,0.4);
+  }
+
+  .corner-cta::after {
+    top: 0; right: 0;
+    border-top: 1px solid rgba(255,255,253,0.4);
+    border-right: 1px solid rgba(255,255,253,0.4);
+  }
+
+  .corner-cta .c-bl,
+  .corner-cta .c-br {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .corner-cta .c-bl {
+    bottom: 0; left: 0;
+    border-bottom: 1px solid rgba(255,255,253,0.4);
+    border-left: 1px solid rgba(255,255,253,0.4);
+  }
+
+  .corner-cta .c-br {
+    bottom: 0; right: 0;
+    border-bottom: 1px solid rgba(255,255,253,0.4);
+    border-right: 1px solid rgba(255,255,253,0.4);
+  }
+
+  .corner-cta:hover::before,
+  .corner-cta:hover::after,
+  .corner-cta:hover .c-bl,
+  .corner-cta:hover .c-br {
+    width: 24px;
+    height: 24px;
+    border-color: var(--accent-teal);
+  }
+
+  /* Ticker bar */
+  /* Hero headline overlaid at bottom-left */
+  .hero-text {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding: 0 48px;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--accent-teal);
+  }
+
+  .hero-h1 {
+    font-family: var(--font-display);
+    font-size: clamp(44px, 5.5vw, 88px);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    color: var(--white-900);
+    max-width: 760px;
+    margin-bottom: 20px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(255,255,253,0.65);
+    max-width: 480px;
+    margin-bottom: 32px;
+    pointer-events: auto;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    pointer-events: auto;
+    flex-wrap: wrap;
+  }
+
+  .hero-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-teal);
+    color: var(--navy-900);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    position: relative;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .hero-btn-primary::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(59,184,195,0.5);
+    transform: translate(4px, 4px);
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+
+  .hero-btn-primary:hover { background: #fff; }
+  .hero-btn-primary:hover::after { transform: translate(0, 0); }
+
+  .hero-btn-ghost {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,253,0.6);
+    border-bottom: 1px solid rgba(255,255,253,0.2);
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .hero-btn-ghost:hover {
+    color: var(--white-900);
+    border-color: rgba(255,255,253,0.6);
+  }
+
+  .hero-ticker {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid rgba(97, 98, 111, 0.5);
+    overflow: hidden;
+    background: rgba(8, 20, 24, 0.5);
+    backdrop-filter: blur(10px);
+  }
+
+  .ticker-inner {
+    display: flex;
+    animation: ticker 30s linear infinite;
+  }
+
+  .ticker-text {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-900);
+    white-space: nowrap;
+    padding: 24px 48px;
+    letter-spacing: 0.05em;
+  }
+
+  .ticker-text .separator {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-teal);
+    margin: 0 32px;
+    vertical-align: middle;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ============================================
+     MISSION / INTRO SECTION
+     ============================================ */
+  .mission {
+    background: var(--navy-900);
+    position: relative;
+  }
+
+  .mission-inner {
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .mission-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+  }
+
+  .mission-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 480px;
+    flex-shrink: 0;
+  }
+
+  .mission-body {
+    max-width: 376px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .mission-body p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255, 255, 253, 0.85);
+  }
+
+  /* Product grid */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+
+  .product-card {
+    position: relative;
+    aspect-ratio: 0.69;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card-image {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    background: var(--navy-800);
+  }
+
+  .product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out-expo);
+  }
+
+  .product-card:hover .product-card-image img {
+    transform: scale(1.05);
+  }
+
+  /* Overlay card variant */
+  .product-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,29,35,0.9) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .product-card:hover .product-card-overlay {
+    opacity: 1;
+  }
+
+  .product-card-overlay p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255,255,253,0.9);
+    max-width: 320px;
+  }
+
+  .product-card-title {
+    font-family: var(--font-display);
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.99px;
+    color: var(--white-900);
+    text-align: center;
+    padding: 40px 16px;
+  }
+
+  .learn-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    color: var(--white-900);
+    margin-top: 16px;
+    transition: gap 0.3s var(--ease-out-expo);
+  }
+
+  .learn-more-link:hover {
+    gap: 12px;
+  }
+
+  .learn-more-link svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s var(--ease-out-expo);
+  }
+
+  .learn-more-link:hover svg {
+    transform: translate(2px, -2px);
+  }
+
+  /* ============================================
+     VIDEO / AMERICAN MADE SECTION
+     ============================================ */
+  .american-made {
+    background: var(--sand-700);
+    position: relative;
+  }
+
+  .american-made-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .american-made-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 48px;
+  }
+
+  .american-made-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--navy-800);
+    max-width: 480px;
+  }
+
+  .american-made-body {
+    max-width: 480px;
+  }
+
+  .american-made-body p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--navy-800);
+  }
+
+  .video-container {
+    position: relative;
+    aspect-ratio: 1504/916;
+    overflow: hidden;
+    background: #000;
+    cursor: pointer;
+  }
+
+  .video-container img,
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out-expo);
+  }
+
+  .video-container:hover img,
+  .video-container:hover video {
+    transform: scale(1.02);
+  }
+
+  .video-controls {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(99, 99, 99, 0.4);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    transition: background 0.3s ease;
+  }
+
+  .video-controls:hover {
+    background: rgba(99, 99, 99, 0.6);
+  }
+
+  .video-controls svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--white-900);
+  }
+
+  /* ============================================
+     DRONE SPECS (KIWI)
+     ============================================ */
+  .drone-specs {
+    background: var(--white-900);
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .drone-specs-watermark {
+    position: absolute;
+    font-family: var(--font-display);
+    font-size: clamp(200px, 30vw, 480px);
+    font-weight: 500;
+    line-height: 0.88;
+    letter-spacing: -9.6px;
+    color: var(--navy-800);
+    opacity: 0.04;
+    text-transform: capitalize;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .drone-specs-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    width: 100%;
+    padding: 80px 48px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .drone-specs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  .drone-specs-title-block {
+    max-width: 362px;
+  }
+
+  .drone-specs-title {
+    font-family: var(--font-display);
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 0.96;
+    letter-spacing: -0.87px;
+    color: var(--navy-900);
+    margin-bottom: 24px;
+  }
+
+  .drone-specs-table {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .spec-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .spec-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    min-width: 100px;
+    text-align: right;
+  }
+
+  .spec-value {
+    color: var(--navy-900);
+    font-weight: 500;
+  }
+
+  .drone-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 828px;
+    margin: 0 auto;
+    aspect-ratio: 828/431;
+  }
+
+  .drone-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Floating spec badges */
+  .spec-badge {
+    position: absolute;
+    background: var(--white-900);
+    border: 1px solid var(--navy-800);
+    padding: 5px 9px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: var(--font-mono);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.6s var(--ease-out-expo);
+  }
+
+  .spec-badge.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .spec-badge-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: var(--navy-800);
+    opacity: 0.6;
+    line-height: 1.5;
+  }
+
+  .spec-badge-value {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy-800);
+  }
+
+  .spec-badge.top-left { top: 15%; left: 10%; }
+  .spec-badge.top-right { top: 18%; right: 12%; }
+  .spec-badge.bottom-left { bottom: 20%; left: 8%; }
+  .spec-badge.bottom-right { bottom: 15%; right: 10%; }
+
+  /* Connecting lines */
+  .spec-badge::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: rgba(13,29,35,0.2);
+  }
+
+  .spec-badge.top-left::after { right: -40px; top: 50%; }
+  .spec-badge.top-right::after { left: -40px; top: 50%; }
+  .spec-badge.bottom-left::after { right: -40px; top: 50%; }
+  .spec-badge.bottom-right::after { left: -40px; top: 50%; }
+
+  /* ============================================
+     STATS / BY THE NUMBERS
+     ============================================ */
+  .stats {
+    background: var(--white-900);
+    border-top: 1px solid var(--border-light);
+    color: var(--navy-800);
+  }
+
+  .stats-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 80px 48px;
+  }
+
+  .stats-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 72px;
+  }
+
+  .stats-label-dot {
+    width: 11px;
+    height: 11px;
+    background: var(--navy-800);
+  }
+
+  .stats-label-text {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--navy-800);
+  }
+
+  .stat-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6.8vw, 110px);
+    font-weight: 600;
+    line-height: 0.96;
+    letter-spacing: -3.3px;
+    color: var(--navy-800);
+  }
+
+  .stat-number .counter {
+    display: inline-block;
+    min-width: 0;
+  }
+
+  .stat-description {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--navy-800);
+    opacity: 0.75;
+    max-width: 480px;
+  }
+
+  /* ============================================
+     FULL-BLEED CTA
+     ============================================ */
+  .fullbleed-cta {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .fullbleed-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .fullbleed-cta-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 20, 24, 0.55);
+    z-index: 1;
+  }
+
+  .fullbleed-cta-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 8s linear;
+  }
+
+  .fullbleed-cta:hover .fullbleed-cta-bg img {
+    transform: scale(1.05);
+  }
+
+  .fullbleed-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 240px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+  }
+
+  .fullbleed-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 480px;
+  }
+
+  .fullbleed-body {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .fullbleed-body p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255,255,253,0.9);
+  }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-900);
+    position: relative;
+  }
+
+  .text-link-dot {
+    width: 11px;
+    height: 11px;
+    background: var(--white-900);
+    transition: background 0.3s ease;
+  }
+
+  .text-link:hover .text-link-dot {
+    background: var(--accent-teal);
+  }
+
+  /* ============================================
+     FEATURE CAROUSEL
+     ============================================ */
+  .features {
+    background: var(--sand-700);
+    color: var(--navy-800);
+  }
+
+  .features-inner {
+    padding: 104px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .features-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--navy-900);
+    max-width: 864px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+
+  .carousel-track:active {
+    cursor: grabbing;
+  }
+
+  .feature-card {
+    flex-shrink: 0;
+    width: min(680px, 80vw);
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feature-card-bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .feature-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease-out-expo);
+  }
+
+  .feature-card:hover .feature-card-bg img {
+    transform: scale(1.05);
+  }
+
+  .feature-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    z-index: 2;
+  }
+
+  .feature-card-glass {
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background: rgba(44, 44, 44, 0.3);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+  }
+
+  .feature-card-icon {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid var(--accent-teal);
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .feature-card-icon::before,
+  .feature-card-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--accent-teal);
+  }
+
+  .feature-card-icon::before {
+    width: 8px; height: 1.5px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .feature-card-icon::after {
+    width: 1.5px; height: 8px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .feature-card-label {
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--white-900);
+  }
+
+  .feature-card-desc {
+    font-size: 16px;
+    line-height: 1.44;
+    color: rgba(255,255,253,0.85);
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .carousel-caption {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.44;
+    color: var(--navy-900);
+    max-width: 255px;
+  }
+
+  .carousel-arrows {
+    display: flex;
+    gap: 12px;
+  }
+
+  .carousel-arrow {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(75, 75, 75, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .carousel-arrow:hover {
+    background: rgba(75, 75, 75, 0.3);
+  }
+
+  .carousel-arrow svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--navy-800);
+  }
+
+  /* ============================================
+     FAQ SECTION (AEO)
+     ============================================ */
+  .faq {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .faq-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+  }
+
+  .faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 80px;
+    gap: 48px;
+  }
+
+  .faq-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 480px;
+  }
+
+  .faq-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255,255,253,0.7);
+    max-width: 480px;
+    align-self: flex-end;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faq-item {
+    border-top: 1px solid var(--border-dark);
+    overflow: hidden;
+  }
+
+  .faq-item:last-child {
+    border-bottom: 1px solid var(--border-dark);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--white-900);
+    transition: color 0.3s ease;
+  }
+
+  .faq-question:hover {
+    color: var(--accent-teal);
+  }
+
+  .faq-toggle {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    flex-shrink: 0;
+    margin-left: 24px;
+  }
+
+  .faq-toggle::before,
+  .faq-toggle::after {
+    content: '';
+    position: absolute;
+    background: var(--white-900);
+    transition: transform 0.4s var(--ease-out-expo);
+  }
+
+  .faq-toggle::before {
+    width: 16px; height: 2px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .faq-toggle::after {
+    width: 2px; height: 16px;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .faq-item.open .faq-toggle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s var(--ease-out-expo), padding 0.5s var(--ease-out-expo);
+  }
+
+  .faq-item.open .faq-answer {
+    max-height: 400px;
+  }
+
+  .faq-answer-inner {
+    padding: 0 0 32px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255,255,253,0.7);
+    max-width: 720px;
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  .site-footer {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .footer-outer {
+    max-width: 1600px;
+    margin: 0 auto;
+    border-left: 1px solid var(--border-dark);
+    border-right: 1px solid var(--border-dark);
+  }
+
+  /* Main row: nav left + contact right */
+  .footer-main {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .footer-nav-panel {
+    flex: 1;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-nav-cols {
+    display: flex;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .footer-nav-col {
+    flex: 1;
+    min-width: 160px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-col-title {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    opacity: 0.85;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+    line-height: 1.44;
+    color: rgba(255,255,253,0.85);
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--white-900);
+  }
+
+  /* Contact panel (right column) */
+  .footer-contact-panel {
+    width: 420px;
+    flex-shrink: 0;
+    border-left: 1px solid var(--border-dark);
+    padding: 32px 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-contact-headline {
+    font-family: var(--font-display);
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -0.99px;
+    color: var(--white-900);
+  }
+
+  /* Globe container */
+  .footer-globe-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    min-height: 280px;
+  }
+
+  #swarm-globe {
+    display: block;
+    /* Canvas fills the space */
+  }
+
+  /* Social + bottom rows */
+  .footer-social-row {
+    display: flex;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .footer-social-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 54px;
+    font-family: var(--font-mono);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white-900);
+    border-right: 1px solid var(--border-dark);
+    transition: color 0.3s ease;
+  }
+
+  .footer-social-item:last-child {
+    border-right: none;
+  }
+
+  .footer-social-item:hover {
+    color: var(--accent-teal);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-dark);
+    padding: 40px 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-legal {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--border-dark);
+    letter-spacing: 0.03em;
+  }
+
+  /* Ghost CTA for footer */
+  .footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .footer-cta::before,
+  .footer-cta::after,
+  .footer-cta .c-bl,
+  .footer-cta .c-br {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transition: all 0.4s var(--ease-out-expo);
+  }
+
+  .footer-cta::before { top: 0; left: 0; border-top: 1px solid rgba(255,255,253,0.4); border-left: 1px solid rgba(255,255,253,0.4); }
+  .footer-cta::after  { top: 0; right: 0; border-top: 1px solid rgba(255,255,253,0.4); border-right: 1px solid rgba(255,255,253,0.4); }
+  .footer-cta .c-bl   { bottom: 0; left: 0; border-bottom: 1px solid rgba(255,255,253,0.4); border-left: 1px solid rgba(255,255,253,0.4); }
+  .footer-cta .c-br   { bottom: 0; right: 0; border-bottom: 1px solid rgba(255,255,253,0.4); border-right: 1px solid rgba(255,255,253,0.4); }
+
+  .footer-cta:hover::before,
+  .footer-cta:hover::after,
+  .footer-cta:hover .c-bl,
+  .footer-cta:hover .c-br {
+    width: 14px; height: 14px;
+    border-color: var(--accent-teal);
+  }
+
+  /* pixel arrow icon */
+  .pixel-arrow {
+    display: grid;
+    grid-template-columns: repeat(3, 2.667px);
+    grid-template-rows: repeat(5, 2.667px);
+    gap: 0;
+    width: 8px;
+    height: 13.333px;
+  }
+
+  .pixel-arrow span {
+    background: var(--white-900);
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-main { flex-direction: column; }
+    .footer-contact-panel { width: 100%; border-left: none; border-top: 1px solid var(--border-dark); }
+    .footer-nav-panel { padding: 40px 24px; }
+    .footer-contact-panel { padding: 40px 24px; }
+    .footer-bottom { padding: 24px; flex-direction: column; gap: 8px; }
+  }
+
+  /* ============================================
+     TRUST STRIP (Compliance Badges)
+     ============================================ */
+  .trust-strip {
+    background: var(--navy-800);
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .trust-strip-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    border: 1px solid rgba(255,255,253,0.1);
+    position: relative;
+    transition: border-color 0.4s ease;
+  }
+
+  .trust-badge:hover {
+    border-color: var(--accent-teal);
+  }
+
+  .trust-badge-icon {
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--accent-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .trust-badge-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--accent-teal);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .trust-badge-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .trust-badge-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white-900);
+  }
+
+  .trust-badge-desc {
+    font-size: 12px;
+    color: rgba(255,255,253,0.45);
+    line-height: 1.4;
+  }
+
+  /* ============================================
+     HOW IT WORKS (Process Strip)
+     ============================================ */
+  .how-it-works {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+    position: relative;
+  }
+
+  .how-it-works-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .how-it-works-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .how-it-works-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 480px;
+  }
+
+  .how-it-works-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255,255,253,0.7);
+    max-width: 400px;
+    align-self: flex-end;
+  }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  .process-step {
+    padding: 40px 32px;
+    border-left: 1px solid var(--border-dark);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .process-step:first-child {
+    border-left: none;
+  }
+
+  .process-step-number {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .process-step-number::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-dark);
+  }
+
+  .process-step-icon {
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgba(255,255,253,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.4s ease;
+  }
+
+  .process-step:hover .process-step-icon {
+    border-color: var(--accent-teal);
+  }
+
+  .process-step-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--white-900);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .process-step-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.44px;
+    color: var(--white-900);
+  }
+
+  .process-step-desc {
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,253,0.6);
+  }
+
+  /* ============================================
+     TIMELINE (Company Milestones)
+     ============================================ */
+  .timeline {
+    background: var(--sand-700);
+    position: relative;
+  }
+
+  .timeline-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .timeline-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--navy-800);
+    max-width: 600px;
+  }
+
+  .timeline-track {
+    position: relative;
+    display: flex;
+    gap: 0;
+  }
+
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--navy-800);
+    opacity: 0.15;
+  }
+
+  .timeline-node {
+    flex: 1;
+    position: relative;
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: var(--navy-800);
+    border: 3px solid var(--sand-700);
+    transition: background 0.3s ease;
+  }
+
+  .timeline-node:hover .timeline-dot {
+    background: var(--accent-teal);
+  }
+
+  .timeline-year {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--navy-800);
+  }
+
+  .timeline-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy-800);
+    letter-spacing: -0.36px;
+  }
+
+  .timeline-desc {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--navy-700);
+    max-width: 240px;
+  }
+
+  /* ============================================
+     COMPARISON TABLE (Swarm vs Traditional)
+     ============================================ */
+  .comparison {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+    position: relative;
+  }
+
+  .comparison-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .comparison-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 600px;
+  }
+
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .comparison-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comparison-col-header {
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .comparison-col-tag {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+  }
+
+  .comparison-col.traditional .comparison-col-tag {
+    color: rgba(255,255,253,0.4);
+    border: 1px solid rgba(255,255,253,0.15);
+  }
+
+  .comparison-col.swarm .comparison-col-tag {
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+  }
+
+  .comparison-col-title {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-900);
+    letter-spacing: -0.4px;
+  }
+
+  .comparison-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border-dark);
+    gap: 16px;
+    min-height: 80px;
+  }
+
+  .comparison-row-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+
+  .comparison-col.traditional .comparison-row-icon svg {
+    stroke: rgba(255,255,253,0.3);
+  }
+
+  .comparison-col.swarm .comparison-row-icon svg {
+    stroke: var(--accent-teal);
+  }
+
+  .comparison-row-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .comparison-row-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,253,0.35);
+  }
+
+  .comparison-row-value {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .comparison-col.traditional .comparison-row-value {
+    color: rgba(255,255,253,0.5);
+  }
+
+  .comparison-col.swarm .comparison-row-value {
+    color: var(--white-900);
+  }
+
+  /* ============================================
+     MISSION PROFILES (Use Cases)
+     ============================================ */
+  .mission-profiles {
+    background: var(--white-900);
+    position: relative;
+  }
+
+  .mission-profiles-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .mission-profiles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .mission-profiles-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--navy-900);
+    max-width: 480px;
+  }
+
+  .mission-profiles-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--navy-700);
+    max-width: 400px;
+    align-self: flex-end;
+  }
+
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .profile-card {
+    background: var(--navy-900);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s ease;
+  }
+
+  .profile-card:hover {
+    background: var(--navy-800);
+  }
+
+  .profile-card-icon {
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid var(--accent-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-card-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: var(--accent-teal);
+    fill: none;
+    stroke-width: 1.5;
+  }
+
+  .profile-card-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.44px;
+    color: var(--white-900);
+  }
+
+  .profile-card-desc {
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,253,0.6);
+    flex: 1;
+  }
+
+  .profile-card-variant {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    padding-top: 16px;
+    border-top: 1px solid var(--border-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .profile-card-variant::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--accent-teal);
+  }
+
+  /* ============================================
+     OPERATOR INTERFACE PREVIEW
+     ============================================ */
+  .operator-preview {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .operator-preview-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .operator-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .operator-preview-headline {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 3.3vw, 53px);
+    font-weight: 500;
+    line-height: 1.04;
+    letter-spacing: -1.59px;
+    color: var(--white-900);
+    max-width: 480px;
+  }
+
+  .operator-preview-subtitle {
+    font-size: 18px;
+    line-height: 1.5;
+    color: rgba(255,255,253,0.7);
+    max-width: 400px;
+    align-self: flex-end;
+  }
+
+  .device-frame {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .device-bezel {
+    background: #1a1f24;
+    border: 2px solid #2a3a3f;
+    border-radius: 12px;
+    padding: 16px 16px 0 16px;
+  }
+
+  .device-topbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 0 4px;
+  }
+
+  .device-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2a3a3f;
+  }
+
+  .device-dot:first-child { background: #ff5f57; }
+  .device-dot:nth-child(2) { background: #febc2e; }
+  .device-dot:nth-child(3) { background: #28c840; }
+
+  .device-url {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255,255,253,0.3);
+    letter-spacing: 0.02em;
+  }
+
+  .device-screen {
+    aspect-ratio: 16/9;
+    background: #0a1216;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 220px 1fr 240px;
+    grid-template-rows: 48px 1fr 40px;
+  }
+
+  .ui-toolbar {
+    grid-column: 1 / -1;
+    background: #0d1820;
+    border-bottom: 1px solid #1a2830;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .ui-toolbar-item {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(255,255,253,0.4);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+  }
+
+  .ui-toolbar-item.active {
+    color: var(--accent-teal);
+    border-bottom: 1px solid var(--accent-teal);
+  }
+
+  .ui-sidebar {
+    background: #0d1820;
+    border-right: 1px solid #1a2830;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ui-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(255,255,253,0.5);
+    letter-spacing: 0.02em;
+  }
+
+  .ui-sidebar-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .ui-sidebar-dot.green { background: #28c840; }
+  .ui-sidebar-dot.amber { background: #febc2e; }
+  .ui-sidebar-dot.teal { background: var(--accent-teal); }
+
+  .ui-map {
+    background: #070e12;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ui-map-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(59,184,195,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,184,195,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .ui-map-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255,255,253,0.15);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 1;
+  }
+
+  .ui-panel {
+    background: #0d1820;
+    border-left: 1px solid #1a2830;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ui-panel-title {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,253,0.3);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1a2830;
+  }
+
+  .ui-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ui-stat-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(255,255,253,0.35);
+  }
+
+  .ui-stat-value {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-teal);
+  }
+
+  .ui-statusbar {
+    grid-column: 1 / -1;
+    background: #0d1820;
+    border-top: 1px solid #1a2830;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 24px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: rgba(255,255,253,0.3);
+  }
+
+  .ui-status-live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #28c840;
+  }
+
+  .ui-status-live::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #28c840;
+    animation: pulse-live 2s ease infinite;
+  }
+
+  @keyframes pulse-live {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .device-callouts {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .device-callout {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .device-callout-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .device-callout-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .device-callout-title {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white-900);
+  }
+
+  .device-callout-desc {
+    font-size: 13px;
+    color: rgba(255,255,253,0.5);
+    line-height: 1.5;
+  }
+
+  /* ============================================
+     PARTNER QUOTE BLOCK
+     ============================================ */
+  .quote-block {
+    background: var(--navy-800);
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .quote-block-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 128px 48px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .quote-mark {
+    font-family: var(--font-display);
+    font-size: 80px;
+    line-height: 0.5;
+    color: var(--accent-teal);
+    opacity: 0.5;
+  }
+
+  .quote-text {
+    font-family: var(--font-display);
+    font-size: clamp(24px, 2.5vw, 36px);
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.72px;
+    color: var(--white-900);
+    max-width: 860px;
+  }
+
+  .quote-attribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 16px;
+  }
+
+  .quote-name {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white-900);
+  }
+
+  .quote-role {
+    font-size: 14px;
+    color: rgba(255,255,253,0.45);
+  }
+
+  /* ============================================
+     PRESS / MEDIA LOGOS
+     ============================================ */
+  .press-logos {
+    background: var(--navy-900);
+    border-top: 1px solid var(--border-dark);
+    position: relative;
+  }
+
+  .press-logos-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 80px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .press-logos-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .press-logos-label-dot {
+    width: 11px;
+    height: 11px;
+    background: var(--white-900);
+    opacity: 0.3;
+  }
+
+  .press-logos-label-text {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,253,0.35);
+  }
+
+  .press-logos-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    flex-wrap: wrap;
+  }
+
+  .press-logo {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(255,255,253,0.2);
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .press-logo:hover {
+    color: rgba(255,255,253,0.5);
+  }
+
+  /* ============================================
+     FLOATING GRID LINES (decoration)
+     ============================================ */
+  .grid-lines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .grid-lines::before,
+  .grid-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,253,0.03);
+  }
+
+  .grid-lines::before { left: calc(50% - 400px); }
+  .grid-lines::after { left: calc(50% + 400px); }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 1024px) {
+    .container { padding: 0 24px; }
+    .mission-top { flex-direction: column; gap: 32px; }
+    .mission-headline { max-width: 100%; }
+    .mission-body { max-width: 100%; }
+    .product-grid { grid-template-columns: 1fr; }
+    .product-card { aspect-ratio: 1.2; }
+    .american-made-top { flex-direction: column; }
+    .drone-specs-header { flex-direction: column; gap: 32px; }
+    .stat-row { flex-direction: column; align-items: flex-start; gap: 16px; }
+    .fullbleed-cta-content { flex-direction: column; padding: 120px 48px; }
+    .faq-header { flex-direction: column; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+    nav { display: none; }
+    .hamburger { display: flex; }
+    .header-cta { display: none; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-step:nth-child(3) { border-left: none; }
+    .comparison-grid { grid-template-columns: 1fr; }
+    .profile-grid { grid-template-columns: repeat(2, 1fr); }
+    .timeline-track { flex-direction: column; gap: 32px; }
+    .timeline-track::before { top: 0; bottom: 0; left: 8px; width: 2px; height: auto; right: auto; }
+    .timeline-node { padding-top: 0; padding-left: 48px; }
+    .timeline-dot { top: 0; left: 0; }
+    .how-it-works-header { flex-direction: column; }
+    .operator-preview-header { flex-direction: column; }
+    .mission-profiles-header { flex-direction: column; }
+    .device-screen { grid-template-columns: 1fr; grid-template-rows: 48px 1fr 40px; }
+    .ui-sidebar, .ui-panel { display: none; }
+    .device-callouts { flex-direction: column; }
+  }
+
+  @media (max-width: 640px) {
+    .container { padding: 0 16px; }
+    .mission-inner { padding: 64px 16px; }
+    .american-made-inner { padding: 64px 16px; }
+    .drone-specs-content { padding: 40px 16px; }
+    .stats-inner { padding: 40px 16px; }
+    .fullbleed-cta-content { padding: 80px 16px; }
+    .features-inner { padding: 64px 16px; }
+    .faq-inner { padding: 64px 16px; }
+    .footer-inner { grid-template-columns: 1fr; padding: 40px 16px; gap: 32px; }
+    .footer-bottom { padding: 16px; flex-direction: column; gap: 8px; }
+    .header-inner { padding: 0 16px; }
+    .stat-number { letter-spacing: -1.5px; }
+    .feature-card { width: 85vw; height: 500px; }
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step { border-left: none; border-top: 1px solid var(--border-dark); }
+    .process-step:first-child { border-top: none; }
+    .profile-grid { grid-template-columns: 1fr; }
+    .trust-strip-inner { gap: 24px; }
+    .trust-badge { padding: 12px 16px; }
+    .how-it-works-inner { padding: 64px 16px; }
+    .timeline-inner { padding: 64px 16px; }
+    .comparison-inner { padding: 64px 16px; }
+    .mission-profiles-inner { padding: 64px 16px; }
+    .operator-preview-inner { padding: 64px 16px; }
+    .quote-block-inner { padding: 64px 16px; }
+    .press-logos-inner { padding: 40px 16px; }
+    .press-logos-row { gap: 32px; }
+    .device-callouts { gap: 16px; }
+  }
+
+  /* ============================================
+     SMOOTH PARALLAX (for elements with data-speed)
+     ============================================ */
+  .parallax-wrap {
+    will-change: transform;
+  }
+</style>
+</head>
+
+<body>
+  <!-- Subtle grid lines decoration -->
+  <div class="grid-lines"></div>
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Swarm Defense Technologies Home">
+        <div class="logo-mark"></div>
+        SWARM
+      </a>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <a href="/drones" class="nav-link">Hardware <span class="plus">+</span></a>
+        <a href="/software" class="nav-link">Software <span class="plus">+</span></a>
+        <a href="/capabilities" class="nav-link">Capabilities <span class="plus">+</span></a>
+        <a href="/training" class="nav-link">Training <span class="plus">+</span></a>
+        <a href="/press" class="nav-link">Press</a>
+      </nav>
+
+      <a href="/contact" class="header-cta"><span>Contact Us</span></a>
+
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero scanlines" aria-label="Hero">
+      <div class="hero-bg">
+        <!-- Replace with actual video/image -->
+        <div style="width:100%;height:100%;background:linear-gradient(135deg, #0a1a1e 0%, #142428 30%, #1a2e28 60%, #0a1a1e 100%);"></div>
+        <div class="color-wash"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-video-frame bracket-frame reveal-scale">
+          <span class="corner-bl"></span>
+          <span class="corner-br"></span>
+          <div class="hero-video-inner">
+            <!-- Replace src with actual hero video/image -->
+            <div style="width:100%;height:100%;background:linear-gradient(180deg, #1a2e28 0%, #0d1d23 100%);display:flex;align-items:center;justify-content:center;">
+              <div style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,253,0.3);text-transform:uppercase;letter-spacing:0.1em;">Hero Video / Drone Footage</div>
+            </div>
+            <div class="hero-video-play" role="button" aria-label="Play demo video">
+              <div class="play-btn"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-cta corner-cta reveal" style="margin-top:4px;">
+          <span class="c-bl"></span>
+          <span class="c-br"></span>
+          <span class="demo-cta-text">Watch Full Demo</span>
+          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.25 4.813L17.188 11L8.25 17.188V4.813Z" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Hero headline overlay -->
+      <div class="hero-text">
+        <p class="hero-eyebrow reveal">Auburn Hills, MI — American-Made Autonomous Drone Systems</p>
+        <h1 class="hero-h1 reveal">One soldier.<br>The power of<br>a thousand.</h1>
+        <p class="hero-sub reveal">Swarm Defense Technologies builds autonomous drone systems that multiply the warfighter's reach — 1,000 drones, 1 operator, zero manual piloting. NDAA-compliant. Made in the USA.</p>
+        <div class="hero-cta-row reveal">
+          <a href="/contact" class="hero-btn-primary">
+            Schedule a Live Demo
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11L11 3M11 3H5M11 3V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="/drones" class="hero-btn-ghost">View Our Systems</a>
+        </div>
+      </div>
+
+      <!-- Ticker -->
+      <div class="hero-ticker">
+        <div class="ticker-inner">
+          <div class="ticker-text">
+            Defense Drones Designed &amp; Built in the United States
+            <span class="separator"></span>
+            NDAA-Compliant Supply Chain
+            <span class="separator"></span>
+            Selected: U.S. Army Drone Dominance Program
+            <span class="separator"></span>
+            72,000 Units / Year Production Capacity
+            <span class="separator"></span>
+            1 Operator : 1,000+ Drones
+            <span class="separator"></span>
+            0.25s Inter-Drone Response Time
+            <span class="separator"></span>
+            $700 Bill of Materials
+            <span class="separator"></span>
+            Auburn Hills, Michigan
+            <span class="separator"></span>
+            120 MPH Dash Speed — KIWI Attack System
+            <span class="separator"></span>
+            &lt;20 Parts — Field-Assembleable in Minutes
+            <span class="separator"></span>
+          </div>
+          <div class="ticker-text" aria-hidden="true">
+            Defense Drones Designed &amp; Built in the United States
+            <span class="separator"></span>
+            NDAA-Compliant Supply Chain
+            <span class="separator"></span>
+            Selected: U.S. Army Drone Dominance Program
+            <span class="separator"></span>
+            72,000 Units / Year Production Capacity
+            <span class="separator"></span>
+            1 Operator : 1,000+ Drones
+            <span class="separator"></span>
+            0.25s Inter-Drone Response Time
+            <span class="separator"></span>
+            $700 Bill of Materials
+            <span class="separator"></span>
+            Auburn Hills, Michigan
+            <span class="separator"></span>
+            120 MPH Dash Speed — KIWI Attack System
+            <span class="separator"></span>
+            &lt;20 Parts — Field-Assembleable in Minutes
+            <span class="separator"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TRUST STRIP (Compliance Badges)
+         ========================================== -->
+    <section class="trust-strip" aria-label="Compliance and trust signals">
+      <div class="trust-strip-inner stagger">
+        <div class="trust-badge reveal">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 7v5c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <span class="trust-badge-label">NDAA Compliant</span>
+            <span class="trust-badge-desc">Full compliance with National Defense Authorization Act</span>
+          </div>
+        </div>
+
+        <div class="trust-badge reveal">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" stroke-linecap="round" stroke-linejoin="round"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <span class="trust-badge-label">Made in USA</span>
+            <span class="trust-badge-desc">100% domestic manufacturing, Auburn Hills, MI</span>
+          </div>
+        </div>
+
+        <div class="trust-badge reveal">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <span class="trust-badge-label">ITAR Registered</span>
+            <span class="trust-badge-desc">International Traffic in Arms Regulations compliant</span>
+          </div>
+        </div>
+
+        <div class="trust-badge reveal">
+          <div class="trust-badge-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke-linecap="round" stroke-linejoin="round"/><polyline points="22 4 12 14.01 9 11.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="trust-badge-text">
+            <span class="trust-badge-label">Drone Dominance Program</span>
+            <span class="trust-badge-desc">Selected for the U.S. Army's $1.1B national drone program</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MISSION / PRODUCT SHOWCASE
+         ========================================== -->
+    <section class="mission rail" aria-label="Mission and products">
+      <div class="mission-inner">
+        <div class="mission-top">
+          <h2 class="mission-headline reveal-left">
+            Defense drones designed and built in the United States
+          </h2>
+          <div class="mission-body reveal-right">
+            <p>All hardware, software, and electronics — designed and manufactured in-house in Auburn Hills, MI. Domestic supply chain since 2021. No foreign components. No covered-country dependencies.</p>
+            <a href="/drones" class="corner-cta" role="link" tabindex="0">
+              <span class="c-bl"></span>
+              <span class="c-br"></span>
+              <span class="demo-cta-text">Explore Our Systems</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-grid stagger">
+          <article class="product-card reveal">
+            <div class="product-card-image">
+              <!-- Replace with actual drone image -->
+              <div style="width:100%;height:100%;background:linear-gradient(180deg, #1c2e28 0%, #0a1a1e 100%);"></div>
+            </div>
+            <div class="product-card-overlay">
+              <p>Purpose-built one-way attack platform. 120 mph dash. 20-mile range. 9 lb SWARM SLED payload. CLIK + sUPI compatible. Paired with STRIKE DECK GCS — power on, fly, strike. Three operator decisions: Follow, Ignore, Strike.</p>
+              <a href="/drones" class="learn-more-link">Full Specs <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <h3 class="product-card-title">KIWI + STRIKE DECK</h3>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card-image">
+              <div style="width:100%;height:100%;background:linear-gradient(180deg, #1e2a2e 0%, #0c1c20 100%);"></div>
+            </div>
+            <div class="product-card-overlay">
+              <p>High-volume, low-cost autonomous swarm platforms. Under $700 bill of materials. Less than 20 parts. Field-assembleable in minutes. 50 per Pelican case. 72,000+ units per year — scalable to 100,000.</p>
+              <a href="/drones" class="learn-more-link">Platform Overview <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+            <h3 class="product-card-title">Gen2 Swarm Platform</h3>
+          </article>
+
+          <article class="product-card reveal">
+            <div class="product-card-image">
+              <div style="width:100%;height:100%;background:linear-gradient(180deg, #162428 0%, #0a1418 100%);display:flex;align-items:center;justify-content:center;">
+                <div style="font-family:var(--font-mono);font-size:11px;color:rgba(255,255,253,0.2);text-transform:uppercase;letter-spacing:0.1em;">Software Platform</div>
+              </div>
+            </div>
+            <div class="product-card-overlay">
+              <p>Proprietary swarm coordination engine. One operator controls 1,000+ drones simultaneously. 0.25-second inter-drone response time. GPS-denied capable. Device-agnostic. OTA updates. No coding required.</p>
+              <a href="/software" class="learn-more-link">
+                Learn More
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <h3 class="product-card-title">Swarm Defense Software</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         HOW IT WORKS (Process Strip)
+         ========================================== -->
+    <section class="how-it-works" aria-label="How swarm deployment works">
+      <div class="how-it-works-inner">
+        <div class="how-it-works-header">
+          <h2 class="how-it-works-headline reveal-left">From case to coordinated strike in under a minute</h2>
+          <p class="how-it-works-subtitle reveal-right">Our end-to-end system compresses the kill chain. One operator. Hundreds of drones. Zero manual piloting per unit. Sub-minute power-on to airborne.</p>
+        </div>
+
+        <div class="process-steps stagger">
+          <div class="process-step reveal">
+            <span class="process-step-number">01</span>
+            <div class="process-step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            </div>
+            <h3 class="process-step-title">Power On &amp; Launch</h3>
+            <p class="process-step-desc">Sub-minute power-on to airborne. Zero manual configuration. STRIKE DECK GCS initializes — the system is ready before a traditional drone operator runs pre-flight checks.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-number">02</span>
+            <div class="process-step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="8" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="5" cy="16" r="2"/><circle cx="19" cy="16" r="2"/><path d="M9.5 10.5L7 9M14.5 10.5L17 9M9.5 13.5L7 15M14.5 13.5L17 15"/></svg>
+            </div>
+            <h3 class="process-step-title">Swarm Forms Autonomously</h3>
+            <p class="process-step-desc">Mesh network establishes in 0.25 seconds per inter-drone handshake. Each unit assumes its role automatically — no programming, no individual tasking by the operator.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-number">03</span>
+            <div class="process-step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="process-step-title">Navigate in Any Environment</h3>
+            <p class="process-step-desc">GPS-denied navigation stack validated under GNSS denial and RF jamming. Frequency-agile encrypted C2 datalink maintains command even in electronically contested airspace.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <span class="process-step-number">04</span>
+            <div class="process-step-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="process-step-title">Three Decisions: Follow, Ignore, Strike</h3>
+            <p class="process-step-desc">The operator makes the call. SWARM SIGHT onboard ATR provides AI target recognition and autonomous kill-chain closure. BDA captured. Full mission telemetry logged for after-action review.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AMERICAN MADE / VIDEO
+         ========================================== -->
+    <section class="american-made" aria-label="American manufacturing">
+      <div class="american-made-inner">
+        <div class="american-made-top">
+          <h2 class="american-made-headline reveal-left">
+            Engineered and manufactured on American soil
+          </h2>
+          <div class="american-made-body reveal-right">
+            <p>Every component — from circuit boards to airframes — is designed, tested, and assembled at our facility in Auburn Hills, Michigan. US-sourced motors and batteries. No covered-country components. NDAA-compliant domestic supply chain since 2021.</p>
+            <p style="margin-top:16px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent-teal);">Auburn Hills, Michigan · Est. 2017</p>
+          </div>
+        </div>
+
+        <div class="video-container reveal-scale">
+          <!-- Replace with actual video -->
+          <div style="width:100%;height:100%;background:linear-gradient(135deg, #2a3530 0%, #1a2520 100%);display:flex;align-items:center;justify-content:center;">
+            <div style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,253,0.2);text-transform:uppercase;letter-spacing:0.1em;">Manufacturing / Facility Video</div>
+          </div>
+          <div class="video-controls">
+            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="4" width="4" height="14" rx="1" fill="white"/>
+              <rect x="13" y="4" width="4" height="14" rx="1" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TIMELINE (Company Milestones)
+         ========================================== -->
+    <section class="timeline" aria-label="Company milestones">
+      <div class="timeline-inner">
+        <h2 class="timeline-headline reveal-left">Eight years from the light show stage to the battlefield</h2>
+
+        <div class="timeline-track">
+          <div class="timeline-node reveal">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2017</span>
+            <h3 class="timeline-title">Founded</h3>
+            <p class="timeline-desc">Two partners built a drone light show company from scratch. Within years, conducting 200+ shows annually with 7-figure revenue — and developing proprietary swarm coordination software to stay ahead of competition.</p>
+          </div>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2020</span>
+            <h3 class="timeline-title">Defense Pivot</h3>
+            <p class="timeline-desc">Recognized the direct application of entertainment swarm tech to defense. Began R&D on autonomous systems for contested environments — GPS-denied navigation, encrypted C2, attritable platforms.</p>
+          </div>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2021</span>
+            <h3 class="timeline-title">100% Domestic</h3>
+            <p class="timeline-desc">Achieved full NDAA-compliant domestic manufacturing. All hardware, software, and electronics produced in-house at Auburn Hills, MI. US-sourced motors, batteries, and components — no covered-country dependencies.</p>
+          </div>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">KIWI Validated</h3>
+            <p class="timeline-desc">KIWI one-way attack platform achieves full field validation at SDT's own test range — 120 mph dash, 20-mile range, 9 lb payload, CLIK + sUPI compatible. WSESRB-compliant lethality integration with Bravo Ordnance.</p>
+          </div>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-dot"></div>
+            <span class="timeline-year">2025</span>
+            <h3 class="timeline-title">Drone Dominance</h3>
+            <p class="timeline-desc">Selected for the U.S. Army's Drone Dominance Program. Production-capable at 72,000+ units per year — scalable to 100,000 with minimal additional investment. As seen in Fox Business, Defense One, and the Wall Street Journal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         DRONE SPECS (KIWI)
+         ========================================== -->
+    <section class="drone-specs" aria-label="Kiwi drone specifications">
+      <div class="drone-specs-watermark" aria-hidden="true">Kiwi</div>
+
+      <div class="drone-specs-content">
+        <div class="drone-specs-header">
+          <div class="drone-specs-title-block reveal-left">
+            <h2 class="drone-specs-title">Built for the warfighter who has three weeks of drone training, not three years.</h2>
+            <p style="font-size:13px;line-height:1.6;color:#617175;margin:10px 0 16px;max-width:420px;">KIWI is a purpose-built one-way attack quadcopter. Paired with STRIKE DECK — a tactical GCS designed for operators under stress — the complete system goes from unboxing to impact with zero configuration.</p>
+            <a href="/drones" class="learn-more-link" style="color:var(--navy-900);">
+              Full Specifications
+              <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 11.5L11.5 4.5M11.5 4.5H5.5M11.5 4.5V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="drone-specs-table reveal-right">
+            <div class="spec-row"><span class="spec-label">Max Speed:</span><span class="spec-value">120 mph dash / 70 mph cruise</span></div>
+            <div class="spec-row"><span class="spec-label">Range:</span><span class="spec-value">20 mi (25 min endurance)</span></div>
+            <div class="spec-row"><span class="spec-label">Ceiling:</span><span class="spec-value">16,000 ft MSL</span></div>
+            <div class="spec-row"><span class="spec-label">Payload:</span><span class="spec-value">9 lb (SWARM SLED)</span></div>
+            <div class="spec-row"><span class="spec-label">MTOW:</span><span class="spec-value">26 lb</span></div>
+            <div class="spec-row"><span class="spec-label">Unit Cost:</span><span class="spec-value">≤ $5,500</span></div>
+            <div class="spec-row"><span class="spec-label">Navigation:</span><span class="spec-value">GPS-denied + encrypted C2</span></div>
+            <div class="spec-row"><span class="spec-label">Payload Std:</span><span class="spec-value">CLIK + sUPI compatible</span></div>
+          </div>
+        </div>
+
+        <div class="drone-image-container">
+          <!-- Replace with actual drone image -->
+          <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+            <div style="font-family:var(--font-mono);font-size:12px;color:rgba(13,29,35,0.2);text-transform:uppercase;letter-spacing:0.1em;">KIWI — Isometric View</div>
+          </div>
+
+          <div class="spec-badge top-left">
+            <span class="spec-badge-label">Dash Speed</span>
+            <span class="spec-badge-value">120 mph</span>
+          </div>
+
+          <div class="spec-badge top-right">
+            <span class="spec-badge-label">Range</span>
+            <span class="spec-badge-value">20 mi</span>
+          </div>
+
+          <div class="spec-badge bottom-left">
+            <span class="spec-badge-label">Ceiling</span>
+            <span class="spec-badge-value">16,000 ft</span>
+          </div>
+
+          <div class="spec-badge bottom-right">
+            <span class="spec-badge-label">Unit Cost</span>
+            <span class="spec-badge-value">≤ $5,500</span>
+          </div>
+        </div>
+
+        <p class="drone-specs-tm reveal" style="position:absolute;right:48px;bottom:calc(50% - 80px);font-family:var(--font-display);font-size:53px;font-weight:600;opacity:0.06;color:var(--navy-800);letter-spacing:-1.06px;">TM</p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STATS / BY THE NUMBERS
+         ========================================== -->
+    <section class="stats" aria-label="Key statistics">
+      <div class="stats-inner">
+        <div class="stats-label reveal">
+          <div class="stats-label-dot"></div>
+          <span class="stats-label-text">By The Numbers</span>
+        </div>
+
+        <div class="stat-row reveal">
+          <div class="stat-number"><span class="counter" data-target="72">0</span> Thousand</div>
+          <p class="stat-description">Units per year — current annual production capacity at our Auburn Hills facility. Scalable to 100,000+ with minimal additional manufacturing investment.</p>
+        </div>
+
+        <div class="stat-row reveal">
+          <div class="stat-number"><span class="counter" data-target="8">0</span> Years</div>
+          <p class="stat-description">Of autonomous swarm development — from 200+ commercial light shows per year to DoD-grade autonomous attack platforms. The technology is proven because it was built to compete commercially first.</p>
+        </div>
+
+        <div class="stat-row reveal">
+          <div class="stat-number">1,<span class="counter" data-target="000">0</span>+</div>
+          <p class="stat-description">Drones coordinated simultaneously by a single operator via our proprietary swarm software. 0.25-second inter-drone response time. No individual piloting required.</p>
+        </div>
+
+        <div class="stat-row reveal">
+          <div class="stat-number">$<span class="counter" data-target="700">0</span></div>
+          <p class="stat-description">Total bill of materials for the Gen2 platform. Less than 20 parts. Assembled in the field in minutes with minimal training — 50 units per Pelican case.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FULL-BLEED CTA
+         ========================================== -->
+    <section class="fullbleed-cta" aria-label="Capabilities overview">
+      <div class="fullbleed-cta-bg">
+        <!-- Replace with actual background image -->
+        <div style="width:100%;height:100%;background:linear-gradient(135deg, #0a1a1e 0%, #1a2e32 50%, #0a1a1e 100%);"></div>
+      </div>
+      <div class="fullbleed-cta-content">
+        <h2 class="fullbleed-headline reveal-left">
+          These are not concepts.
+        </h2>
+        <div class="fullbleed-body reveal-right">
+          <p>Every product in the Swarm Defense lineup has been field-validated, live-fire tested, and is production-ready today. KIWI has flown. The software has coordinated swarms at scale. The supply chain is domestic and operational. This is not a pitch deck. This is a live program.</p>
+          <a href="/capabilities" class="text-link">
+            <span class="text-link-dot"></span>
+            See All Capabilities
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURE CAROUSEL
+         ========================================== -->
+    <section class="features" aria-label="Capabilities detail">
+      <div class="features-inner">
+        <h2 class="features-headline reveal">A closer look at our capabilities</h2>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            <article class="feature-card">
+              <div class="feature-card-bg">
+                <div style="width:100%;height:100%;background:linear-gradient(180deg, #2a3530 0%, #141e1a 100%);"></div>
+              </div>
+              <div class="feature-card-content">
+                <div class="feature-card-glass">
+                  <div class="feature-card-icon"></div>
+                  <h3 class="feature-card-label">Attritable Attack</h3>
+                  <p class="feature-card-desc">At $700 BOM and sub-$5,500 per KIWI unit, Swarm Defense enables attritable operations at a scale no adversary can match. Lose the drone, hold the objective. Mass production without budget-breaking unit costs.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card-bg">
+                <div style="width:100%;height:100%;background:linear-gradient(180deg, #1e2830 0%, #0c161a 100%);"></div>
+              </div>
+              <div class="feature-card-content">
+                <div class="feature-card-glass">
+                  <div class="feature-card-icon"></div>
+                  <h3 class="feature-card-label">C-UAS Training &amp; Targetry</h3>
+                  <p class="feature-card-desc">Configurable target drone systems for realistic threat replication at scale. Used by Army, Air Force, and Navy C-UAS programs. Live threat simulation for operators who need more than a static target — they need a swarm.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card-bg">
+                <div style="width:100%;height:100%;background:linear-gradient(180deg, #242e28 0%, #0e1814 100%);"></div>
+              </div>
+              <div class="feature-card-content">
+                <div class="feature-card-glass">
+                  <div class="feature-card-icon"></div>
+                  <h3 class="feature-card-label">GPS-Denied Operations</h3>
+                  <p class="feature-card-desc">Fused navigation stack validated under GNSS denial and active RF jamming. Frequency-agile encrypted C2 datalink with confirmed range under RF stress. Built for the electromagnetic environment of modern contested airspace.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card-bg">
+                <div style="width:100%;height:100%;background:linear-gradient(180deg, #1a2428 0%, #0a1418 100%);"></div>
+              </div>
+              <div class="feature-card-content">
+                <div class="feature-card-glass">
+                  <div class="feature-card-icon"></div>
+                  <h3 class="feature-card-label">ISR &amp; Surveillance</h3>
+                  <p class="feature-card-desc">Multi-drone ISR formations with real-time video feeds, thermal overlay, and ATAK Cursor-on-Target integration. Operator-separated from antenna mast. Persistent area coverage with zero-footprint forward deployment.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card-bg">
+                <div style="width:100%;height:100%;background:linear-gradient(180deg, #281e28 0%, #180c18 100%);"></div>
+              </div>
+              <div class="feature-card-content">
+                <div class="feature-card-glass">
+                  <div class="feature-card-icon"></div>
+                  <h3 class="feature-card-label">Airbase &amp; Formation Defense</h3>
+                  <p class="feature-card-desc">C-UAS swarm defense — air base perimeter protection and ground formation shielding. Scalable from individual asset protection to full airbase coverage. Autonomous intercept with AI target recognition and pixel-lock tracking.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <p class="carousel-caption">Designed by Swarm Defense Technologies, built in Auburn Hills, MI.</p>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" id="carouselPrev" aria-label="Previous slide">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.5 5.25L8.75 14L17.5 22.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="carousel-arrow" id="carouselNext" aria-label="Next slide">
+              <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 5.25L19.25 14L10.5 22.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ (AEO OPTIMIZED)
+         ========================================== -->
+    <section class="faq" aria-label="Frequently asked questions">
+      <div class="faq-inner">
+        <div class="faq-header">
+          <h2 class="faq-headline reveal-left">Frequently Asked Questions</h2>
+          <p class="faq-subtitle reveal-right">Answers to common questions about our autonomous drone systems, manufacturing, and capabilities.</p>
+        </div>
+
+        <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              What is drone swarm technology?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Drone swarm technology enables multiple autonomous drones to operate as a coordinated unit, sharing data and adapting to mission objectives in real time without individual pilot control. Our platform leverages proprietary mesh networking and AI-driven decision-making to coordinate hundreds of drones simultaneously.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              Are your drones NDAA compliant?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Yes. All Swarm Defense hardware, software, and electronics are designed and manufactured in-house at our Auburn Hills, Michigan facility. Our entire supply chain has been NDAA-compliant and fully domestic since 2021. We maintain zero foreign dependencies across every component.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              What is the Kiwi Attack Drone?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                The Kiwi is America's smallest detonation drone, purpose-built for autonomous swarm operations. It features a 65 km/h max speed, 45-minute flight time, 10 km operational range, and 2.5 kg payload capacity. Designed for mass production and rapid deployment.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              Can drones operate without GPS?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Yes. Our drones utilize advanced inertial navigation systems and visual odometry for full autonomous operation in GPS-denied and electronically contested environments. This capability is critical for contested theater operations where GPS jamming is expected.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              How many drones can one operator control?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                A single operator can coordinate 1,000+ drones simultaneously using our proprietary swarm coordination engine, with 0.25-second inter-drone response time. The system handles autonomous task allocation, deconfliction, and mission adaptation — the operator focuses on three decisions: Follow, Ignore, or Strike.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              What is the Drone Dominance Program?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                The Drone Dominance Program is a U.S. Army initiative valued at approximately $1.1 billion, designed to rapidly field large numbers of low-cost autonomous drones for warfighter use. Swarm Defense Technologies was selected for the program based on our production capacity, NDAA-compliant domestic supply chain, and proven autonomous swarm platform.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              What is the production capacity for Swarm Defense drones?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                Swarm Defense Technologies currently produces 72,000 units per year at our Auburn Hills, Michigan facility. With a small additional manufacturing investment, our existing design and processes are capable of scaling beyond 100,000 units per year. A new model variant can be produced in weeks and scaled to high-volume manufacture within months.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="faq-question" itemprop="name">
+              What payload standards does the KIWI support?
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <div class="faq-answer-inner" itemprop="text">
+                KIWI uses the SWARM SLED — a universal modular payload rail supporting both the Picatinny CLIK interface standard and sUPI (Small Universal Payload Interface) at 12V. This enables plug-and-play interoperability with the broadest range of warheads, ESADs, trainer munitions, and anti-materiel payloads from any qualified vendor — without custom engineering.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark" style="width:24px;height:24px;"></div>
+          SWARM
+        </div>
+        <p class="footer-tagline">Defense drones designed and built in the United States. Auburn Hills, Michigan.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">NDAA Compliant</span>
+          <span class="footer-badge">Made in USA</span>
+          <span class="footer-badge">Drone Dominance Program</span>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Products</h4>
+        <ul class="footer-links">
+          <li><a href="/drones">Kiwi Attack Drone</a></li>
+          <li><a href="/software">Software Platform</a></li>
+          <li><a href="/capabilities">Capabilities</a></li>
+          <li><a href="/training">Training Systems</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Company</h4>
+        <ul class="footer-links">
+          <li><a href="/team">Team</a></li>
+          <li><a href="/press">Press</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="/drone-swarm-technology">Drone Swarm Technology</a></li>
+          <li><a href="/counter-uas">Counter-UAS Solutions</a></li>
+          <li><a href="/american-made-drones">American-Made Drones</a></li>
+          <li><a href="/attritable-drones">Attritable Drone Systems</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-legal">&copy; 2025 Swarm Defense Technologies. All rights reserved.</span>
+      <span class="footer-legal">Auburn Hills, MI &mdash; United States</span>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       JAVASCRIPT
+       ========================================== -->
+  <script>
+    // ============================================
+    // SCROLL REVEAL (Intersection Observer)
+    // ============================================
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ============================================
+    // SPEC BADGES REVEAL
+    // ============================================
+    const specBadges = document.querySelectorAll('.spec-badge');
+
+    const badgeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 200);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    specBadges.forEach(badge => badgeObserver.observe(badge));
+
+    // ============================================
+    // STAT COUNTER ANIMATION
+    // ============================================
+    const counters = document.querySelectorAll('.counter');
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.dataset.counted) {
+          entry.target.dataset.counted = 'true';
+          const target = parseInt(entry.target.dataset.target);
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function easeOutQuart(t) {
+            return 1 - Math.pow(1 - t, 4);
+          }
+
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = easeOutQuart(progress);
+            const current = Math.round(eased * target);
+            entry.target.textContent = current;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            } else {
+              entry.target.textContent = target;
+            }
+          }
+
+          requestAnimationFrame(updateCounter);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // ============================================
+    // HEADER SCROLL BEHAVIOR
+    // ============================================
+    let lastScroll = 0;
+    const header = document.querySelector('.site-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+
+      if (currentScroll > lastScroll && currentScroll > 400) {
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ============================================
+    // FAQ ACCORDION
+    // ============================================
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('open');
+        }
+      });
+    });
+
+    // ============================================
+    // CAROUSEL
+    // ============================================
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    let carouselPos = 0;
+
+    function getCardWidth() {
+      const card = track.querySelector('.feature-card');
+      return card.offsetWidth + 16; // gap
+    }
+
+    function getMaxScroll() {
+      return track.scrollWidth - track.parentElement.offsetWidth;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      carouselPos = Math.min(carouselPos + getCardWidth(), getMaxScroll());
+      track.style.transform = `translateX(-${carouselPos}px)`;
+    });
+
+    prevBtn.addEventListener('click', () => {
+      carouselPos = Math.max(carouselPos - getCardWidth(), 0);
+      track.style.transform = `translateX(-${carouselPos}px)`;
+    });
+
+    // Touch/drag support
+    let isDragging = false;
+    let startX = 0;
+    let dragStartPos = 0;
+
+    track.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      dragStartPos = carouselPos;
+      track.style.transition = 'none';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const diff = startX - e.clientX;
+      carouselPos = Math.max(0, Math.min(dragStartPos + diff, getMaxScroll()));
+      track.style.transform = `translateX(-${carouselPos}px)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+      isDragging = false;
+      track.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+    });
+
+    // ============================================
+    // SUBTLE PARALLAX ON MOUSE MOVE (hero only)
+    // ============================================
+    const hero = document.querySelector('.hero');
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      const videoFrame = hero.querySelector('.hero-video-frame');
+      if (videoFrame) {
+        videoFrame.style.transform = `translate(${x * 8}px, ${y * 8}px) scale(${videoFrame.classList.contains('visible') ? 1 : 0.92})`;
+      }
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      const videoFrame = hero.querySelector('.hero-video-frame');
+      if (videoFrame) {
+        videoFrame.style.transform = '';
+      }
+    });
+
+    // ============================================
+    // SMOOTH PARALLAX ON SCROLL
+    // ============================================
+    const parallaxSections = [
+      { el: document.querySelector('.drone-specs-watermark'), speed: 0.15 },
+    ];
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      parallaxSections.forEach(({ el, speed }) => {
+        if (!el) return;
+        const rect = el.parentElement.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const offset = (scrollY - el.parentElement.offsetTop) * speed;
+          el.style.transform = `translate(-50%, calc(-50% + ${offset}px))`;
+        }
+      });
+    }, { passive: true });
+  </script>
+</body>
+</html>
